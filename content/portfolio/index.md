@@ -10,7 +10,7 @@ A summary of selected projects from the past decade.
 ## Mitime
 
 [thisismitime.com](http://thisismitime.com)<br> 
-https://github.com/ajs17/thisismitime
+https://github.com/ajsmith607/thisismitime
 
 Mitime (pronounced "my time") is a minimal metastructure mapped over standard time that counts down available time in a day to organize time more effectively. My original concept, design, coding and copy.
 
@@ -23,7 +23,7 @@ Desktop home page (the theme switches to a dark background during certain times 
 ## M. E. Mills
  
 [memills.com](http://memills.com)<br>
-https://github.com/ajs17/memills-ng
+https://github.com/ajsmith607/memills
 
 My original historical research into the family of Edward H. Mills of Brooktondale New York. My design, coding and copy.
 
