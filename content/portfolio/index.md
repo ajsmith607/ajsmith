@@ -9,6 +9,8 @@ A summary of selected projects from the past decade.
 
 ## Mitime
 
+{{< figure src="/portfolio/images/mitime/home-desktop.png" width="800" class="image" >}}
+
 [thisismitime.com](http://thisismitime.com)<br> 
 https://github.com/ajsmith607/thisismitime
 
@@ -18,10 +20,13 @@ Responsive Hugo site hosted on Github Pages with custom Hugo modules that use Ja
 
 Desktop home page (the theme switches to a dark background during certain times of the day): 
 
-{{< figure src="/portfolio/images/mitime/home-desktop.png" width="800" class="image" >}}
 
 ## M. E. Mills
  
+{{< figure src="/portfolio/images/memills/screenshot.jpg" width="800" class="cols image" >}}
+
+{{< figure src="/portfolio/images/memills/screenshot-inner2.jpg" width="800" class="image" >}}
+
 [memills.com](http://memills.com)<br>
 https://github.com/ajsmith607/memills
 
@@ -29,11 +34,6 @@ My original historical research into the family of Edward H. Mills of Brooktonda
 
 A responsive Hugo website hosted on Github Pages and based on a custom SASS base theme.
 
-{{< figure src="/portfolio/images/memills/screenshot.jpg" width="800" class="cols image" >}}
-
-<div class="cols">
-    {{< figure src="/portfolio/images/memills/screenshot-inner2.jpg" width="800" class="image" >}}
-</div>
 
 <br/>
 
