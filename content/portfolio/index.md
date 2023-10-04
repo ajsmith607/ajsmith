@@ -7,6 +7,13 @@ mainid: "portfolio"
 
 A summary of selected projects from the past decade.
 
+## deedmapify (Available in 2024)
+
+{{< figure src="/portfolio/images/deedmapify/deedmapify-mockup.png" width="800" class="image" >}}
+
+Deedmapify allows anyone to easily create and analyze accurate survey maps based on legal deed descriptions. My original concept, design, coding and copy.
+
+
 ## Mitime
 
 {{< figure src="/portfolio/images/mitime/home-desktop.png" width="800" class="image" >}}
