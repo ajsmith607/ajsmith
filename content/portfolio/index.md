@@ -7,35 +7,35 @@ mainid: "portfolio"
 
 A summary of selected projects from the past decade.
 
-## deedmapify (Available in 2024)
+## deedmapify 
+
+(Available in 2024)
 
 {{< figure src="/portfolio/images/deedmapify/deedmapify-mockup.png" width="500" class="image" >}}
 
-Deedmapify allows anyone to easily create and analyze accurate survey maps based on legal deed descriptions. My original concept, design, coding and copy.
+Deedmapify allows anyone to easily create and analyze accurate survey maps based on legal deed descriptions. My original concept, coding, design and copy.
 
 
 ## Mitime
 
-{{< figure src="/portfolio/images/mitime/home-desktop.png" width="800" class="image" >}}
-
 [thisismitime.com](http://thisismitime.com)<br> 
 https://github.com/ajsmith607/thisismitime
+
+{{< figure src="/portfolio/images/mitime/home-desktop.png" width="800" class="image" >}}
 
 Mitime (pronounced "my time") is a minimal metastructure mapped over standard time that counts down available time in a day to organize time more effectively. My original concept, design, coding and copy.
 
 Responsive Hugo site hosted on Github Pages with custom Hugo modules that use Javascript to dynamically manipulate SVG images.
 
-Desktop home page (the theme switches to a dark background during certain times of the day): 
-
 
 ## M. E. Mills
- 
-{{< figure src="/portfolio/images/memills/screenshot.jpg" width="800" class="cols image" >}}
-
-{{< figure src="/portfolio/images/memills/screenshot-inner2.jpg" width="800" class="image" >}}
 
 [memills.com](http://memills.com)<br>
 https://github.com/ajsmith607/memills
+ 
+{{< figure src="/portfolio/images/memills/screenshot.jpg" width="800" class="image" >}}
+
+{{< figure src="/portfolio/images/memills/screenshot-inner2.jpg" width="800" class="image" >}}
 
 My original historical research into the family of Edward H. Mills of Brooktondale New York. My design, coding and copy.
 
@@ -94,7 +94,7 @@ Self-hosted, responsive Wordpress site using custom plugins for location and eve
 
 ### Large-format multi-fold brochures
 
-Over 100,000 copies printed annually and distributed throughout the region and beyond. The 2014-2015 edition won the CTM Media Group's 2015 Regional Best Brochure Award. The design of the 2015-2016 edition of the brochure was coordinated with the launch of a completely re-implemented website with an updated responsive design (migrating from Drupal to Wordpress) as well as the introduction of an updated Beer Trail logo that same year. 
+Over 100,000 copies printed annually and distributed throughout the region and beyond. The 2014-2015 edition won the CTM Media Group's 2015 Regional Best Brochure Award. The design of the 2015-2016 edition of the brochure was coordinated with the launch of a completely re-implemented website with an updated responsive design (migrating from Drupal to Wordpress) as well as the introduction of an updated Beer Trail logo that same year. (The updated logo was designed by Jonathan Westfall with my input.) 
 
 <div class="cols">
     {{< figure src="/portfolio/images/beer-trail/beer-trail-map-2014-2015.jpg" width="200" class="image" >}} 
