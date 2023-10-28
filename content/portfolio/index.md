@@ -13,17 +13,18 @@ A summary of selected projects from the past decade.
 
 {{< figure src="/portfolio/images/deedmapify/deedmapify-mockup.png" width="500" class="image" >}}
 
-Deedmapify allows anyone to easily create and analyze accurate survey maps based on legal deed descriptions. My original concept, coding, design and copy.
+Deedmapify allows anyone to easily create and analyze accurate survey maps based on legal deed descriptions. My original concept, code, design and copy.
 
 
 ## Mitime
 
 [thisismitime.com](http://thisismitime.com)<br> 
 https://github.com/ajsmith607/thisismitime
+https://github.com/ajsmith607/mitimer
 
 {{< figure src="/portfolio/images/mitime/home-desktop.png" width="800" class="image" >}}
 
-Mitime (pronounced "my time") is a minimal metastructure mapped over standard time that counts down available time in a day to organize time more effectively. My original concept, design, coding and copy.
+Mitime (pronounced "my time") is a minimal metastructure mapped over standard time that counts down available time in a day to organize time more effectively. My original concept, design, code and copy.
 
 Responsive Hugo site hosted on Github Pages with custom Hugo modules that use Javascript to dynamically manipulate SVG images.
 
@@ -37,7 +38,7 @@ https://github.com/ajsmith607/memills
 
 {{< figure src="/portfolio/images/memills/screenshot-inner2.jpg" width="800" class="image" >}}
 
-My original historical research into the family of Edward H. Mills of Brooktondale New York. My design, coding and copy.
+My original historical research into the family of Edward H. Mills of Brooktondale New York. My design, code and copy.
 
 A responsive Hugo website hosted on Github Pages and based on a custom SASS base theme.
 
@@ -48,7 +49,7 @@ A responsive Hugo website hosted on Github Pages and based on a custom SASS base
 
 Boutique men's personal care products based on my personal formulations.
 
-In this partnership, my primary contributions were product development and manufacturing, test marketing, supply chain and inventory management, bookkeeping and accounting, online and print graphic design and copy (including marketing materials as well as product labels), website coding.
+In this partnership, my primary contributions were product development and manufacturing, test marketing, supply chain and inventory management, bookkeeping and accounting, online and print graphic design and copy writing/editing (including marketing materials as well as product labels), website coding.
 
 ### Web site
 
@@ -111,3 +112,6 @@ Over 100,000 copies printed annually and distributed throughout the region and b
     {{< figure src="/portfolio/images/beer-trail/passport.jpg" width="350" class="image" >}} 
 </div>
 
+<br/>
+
+(The Craft Beer Week logo was also created by Jonathan Westfall.)
