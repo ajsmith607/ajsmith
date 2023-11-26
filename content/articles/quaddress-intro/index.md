@@ -82,14 +82,14 @@ This also illustrates that the length of the quaddress itself implies the number
 
 And similarly, different grids can be applied to derivatives as well, such as specifying a location within an photo within a page. The photo would have its quaddress within the page, probably at a low specificity, and then a derivative image of the photo would have its own quaddress, possibly having a greater specificity. 
 
-Obviously, many originals will not be perfectly square, and it is important to remember that this approach is purposely an abstraction of a map, and a map is never the territory. To interpret a quaddress against say, an 11x17 sheet a paper, the consumer can easily make the adjustment because division by quadrants only requires accurately judging the approximate midpoints along an X and Y axis for an area, something that is very natural for everyone.
+Obviously, many originals will not be perfectly square, and it is important to remember that this approach is purposely an abstraction of a map. To interpret a quaddress against say, an 11x17 sheet a paper, one can easily make the adjustment because division by quadrants only requires accurately judging the approximate midpoints along an X and Y axis for an area, something that is very natural for everyone.
 
 <figure class="image"> 
 {{< inline-svg "2d-stretched-grid.svg" >}}
 <figcaption></figcaption>
 </figure> 
 
-The same can be said of non-rectilinear originals. As long as the grid is imagined to be the same maximum width and maximum height of the original, the approach works, as again, using human judgement to apply the mapping is easily understood by anyone. 
+The same can be said of non-rectilinear originals. As long as the grid is imagined to be the same maximum width and maximum height of the original–that is to say, the grid is the object’s minimum bounding box–the approach works, as again, using human judgement to apply the mapping is easily understood by anyone. 
 
 <figure class="image"> 
 {{< inline-svg "2d-irregular-grid.svg" >}}

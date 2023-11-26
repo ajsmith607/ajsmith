@@ -11,7 +11,7 @@ A summary of selected projects from the past decade.
 
 (Available in 2024)
 
-{{< figure src="/portfolio/images/deedmapify/deedmapify-mockup.png" width="500" class="image" >}}
+{{< figure src="/portfolio/images/deedmapify/deedmapify-mockup2.png" width="500" class="image" >}}
 
 Deedmapify allows anyone to easily create and analyze accurate survey maps based on legal deed descriptions. My original concept, code, design and copy.
 
