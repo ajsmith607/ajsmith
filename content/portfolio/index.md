@@ -77,7 +77,7 @@ Smith and Mason products were sold at Narrative Space in Ithaca, New York and Go
 
 ### Retail promotional display
 
-{{< figure src="/portfolio/images/sm/retail-poster.jpg" width="800" class="image" >}}
+{{< figure src="/portfolio/images/sm/retail-poster2.jpg" width="800" class="image" >}}
 
 ## Finger Lakes Beer Trail (archived)
 
