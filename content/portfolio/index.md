@@ -34,7 +34,7 @@ Responsive Hugo site hosted on Github Pages with custom Hugo modules that use Ja
 [memills.com](http://memills.com)<br>
 https://github.com/ajsmith607/memills
  
-{{< figure src="/portfolio/images/memills/screenshot.jpg" width="800" class="image" >}}
+{{< figure src="/portfolio/images/memills/screenshot2.jpg" width="800" class="image" >}}
 
 {{< figure src="/portfolio/images/memills/screenshot-inner2.jpg" width="800" class="image" >}}
 
