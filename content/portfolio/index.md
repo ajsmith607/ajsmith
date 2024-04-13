@@ -18,7 +18,7 @@ Logo and bottle label mockup for naturally fermented herbaceous wine, produced f
 
 ## deedmapify 
 
-(Available in 2024.)
+(In progress.)
 
 {{< figure src="/portfolio/images/deedmapify/deedmapify-mockup2.png" width="500" class="image" >}}
 
