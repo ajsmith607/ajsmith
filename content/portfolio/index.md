@@ -5,11 +5,20 @@ weight: 2
 mainid: "portfolio"
 ---
 
-A summary of selected projects from the past decade.
+A summary of selected projects, present and past.
+
+## mills' berry yard
+
+(Planning.)
+
+{{< figure src="/portfolio/images/berry-yard/label-logo.jpg" width="500" class="image" >}}
+
+Logo and bottle label mockup for naturally fermented herbaceous wine, produced from local, organically grown Triple Crown blackberries. My original concept and design.
+
 
 ## deedmapify 
 
-(Available in 2024)
+(Available in 2024.)
 
 {{< figure src="/portfolio/images/deedmapify/deedmapify-mockup2.png" width="500" class="image" >}}
 
@@ -40,8 +49,7 @@ https://github.com/ajsmith607/memills
 
 My original historical research into the family of Edward H. Mills of Brooktondale New York. My design, code and copy.
 
-A responsive Hugo website hosted on Github Pages and based on a custom SASS base theme.
-
+A responsive Hugo website based on my own custom, configurable SASS base theme and utilizing Git Large File Storage.
 
 <br/>
 
