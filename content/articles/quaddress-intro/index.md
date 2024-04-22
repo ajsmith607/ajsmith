@@ -7,7 +7,7 @@ tags:
 - metadata 
 ---
 
-Quaddressing provides an intuitive and consistent way to make relative spatial references to an original, two dimensional artifact (primarily for documents such as a printed text, photographs, etc.) regardless of its size or shape, or whether the artifact is physical or digital. Quaddressing relies on imprecision to aid human judgement instead of relying on highly specific measurements of varying units across different types of documents, thereby greatly increasing the ease and efficiency of both encoding and interpretation across all documents for both human actors and code. 
+Quadrant Addressing or *Quaddressing* provides an intuitive and consistent way to make relative spatial references to an original, two dimensional artifact (primarily for documents such as a printed text, photographs, etc.) regardless of its size or shape, or whether the artifact is physical or digital. Quaddressing relies on imprecision to aid human judgement instead of relying on highly specific measurements of varying units across different types of documents, thereby greatly increasing the ease and efficiency of both encoding and interpretation across all documents for both human actors and code. 
 
 <!--more-->
 
@@ -51,7 +51,9 @@ image.quaddress = "43";
 Quaddresses in citations may be abbreviated as in the following real-world example:
 
 <figure>
-— 11 Nov 1937, "In Tribute to Emily Mills", The Ithaca Journal, Ithaca NY, p2, q212, newspapers.com.
+
+> — 11 Nov 1937, "In Tribute to Emily Mills", The Ithaca Journal, Ithaca NY, p2, q212, newspapers.com.
+
 </figure>
 
 This approach is simple and leverages the natural human ability to accurately estimate halves (and thus quarters), even of asymmetrical shapes. It should be noted that many documents and artifacts are themselves based on implicit grids, such as columns in a newspaper, streets on a map, and even the composition of photographs.
@@ -101,17 +103,17 @@ The shape of the original artifact is one factor to consider when deciding to in
 In my use cases, such as referencing text within an article on a newspaper page, I only need to specify the approximate starting point of the content. Nothing is gained by, for example, trying to encode the overall area the derivative image occupies. However, this use case and others can be very straightforwardly accommodated, as shown in these two divisional grid examples:
 
 <pre><code>
-# a single quadrant address, already discussed
+# a single quaddress, already discussed
 image.quaddress = "43";
 
-# a range of quadrants
+# a range of quaddresses
 image.quadrange = "14-34";
 
-# multiple, possibly non-contiguous, quadrants 
+# multiple, possibly non-contiguous, quaddresses
 # as a comma delimited string of integers
 image.quaddresses = "12,22,43";
 
-# multiple, possibly non-contiguous, ranges
+# multiple, possibly non-contiguous, quaddress ranges
 image.quadranges = "14-34,22-44";
 
 # etc.

@@ -53,11 +53,13 @@ A responsive Hugo website based on my own custom, configurable SASS base theme a
 
 <br/>
 
-## Smith and Mason (archived)
+## Smith and Mason
+
+(Archived.)
 
 Boutique men's personal care products based on my personal formulations.
 
-In this partnership, my primary contributions were product development and manufacturing, test marketing, supply chain and inventory management, bookkeeping and accounting, online and print graphic design and copy writing/editing (including marketing materials as well as product labels), website coding.
+I was a co-founder of this partnership, and my primary responsibilities included product development and manufacturing, test marketing, supply chain and inventory management, bookkeeping and accounting, online and print graphic design and copy writing/editing (including marketing materials as well as product labels), and website coding.
 
 ### Web site
 
@@ -87,13 +89,17 @@ Smith and Mason products were sold at Narrative Space in Ithaca, New York and Go
 
 {{< figure src="/portfolio/images/sm/retail-poster2.jpg" width="800" class="image" >}}
 
-## Finger Lakes Beer Trail (archived)
+<br />
+
+## Finger Lakes Beer Trail 
+
+(Archived.)
 
 Finger Lakes Beer Trail Marketing and Tourism Associates, LLC. promoted the craft breweries and related businesses in the greater Finger Lakes region of upstate New York through a marketing platform that included print, broadcast and online/social media channels as well as in person events. 
 
 In partnership with Watkins Glen International, the Finger Lakes Beer Trail helped organize and sponsor the first three years of the Finger Lakes Craft Beer Festival. The Finger Lakes Beer Trail won the 2011 Tompkins County Signs of Sustainability Award.
 
-My main responsibilities included print, broadcast (TV and radio) and online marketing including print and digital graphic design and copy, event/program planning, promotion, and management as well as website coding and bookkeeping.
+I was a co-founder of this partnership, and my primary responsibilities included print, broadcast (TV and radio) and online marketing including print and digital graphic design and copy, event/program planning, promotion, and management as well as bookkeeping and website coding.
 
 ### Web site
 
