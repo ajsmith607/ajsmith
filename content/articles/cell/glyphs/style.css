@@ -1,0 +1,10 @@
+svg.cell-alpha  {
+    --major-stroke-width: .5;
+    --minor-stroke-width: .25;
+    --stroke-color: white;
+    width: 150px;
+    height: 150px; 
+    stroke-width: var(--major-stroke-width);
+    stroke: var(--stroke-color);
+    stroke-linecap: square;
+}

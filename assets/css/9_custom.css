@@ -29,6 +29,6 @@ header, nav, footer,
     text-transform: lowercase; 
 }
 
-figure.image { margin-bottom: calc( var(--line-height) * 1); }
+figure.image { margin-bottom: calc( var(--line-height) * 2); }
 .cols figure.image { margin-bottom: 0; }
 

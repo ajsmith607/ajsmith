@@ -7,16 +7,16 @@ mainid: "portfolio"
 
 A summary of selected projects, present and past.
 
-## the berry yard
+## The Berry Yard
 
 (Planning.)
 
 {{< figure src="/portfolio/images/berry-yard/label-logo.jpg" width="500" class="image" >}}
 
-Logo and bottle label mockup for naturally fermented herbaceous wine, produced from local, organically grown Triple Crown blackberries. My original concept and design.
+Logo and bottle label mockup for naturally fermented herbaceous wine, produced from local, organically grown blackberries. My original concept and design.
 
 
-## deedmapify 
+## Deedmapify 
 
 (In progress.)
 
@@ -25,11 +25,37 @@ Logo and bottle label mockup for naturally fermented herbaceous wine, produced f
 Deedmapify allows anyone to easily create and analyze accurate survey maps based on legal deed descriptions. My original concept, code, design and copy.
 
 
+## pip
+
+The following is an imagined logo design for a minimal, functional chess piece set concept I created that resembles the faces of dice, called {{% pagelink "minimal-chess-pieces" "pip" %}}. 
+
+{{< figure src="/articles/minimal-chess-pieces/pip-logo.svg" width="500" >}}
+
+
+## Wine Cube
+
+[ajsmith607.github.io/winecube](https://ajsmith607.github.io/winecube/)<br>
+[github.com/ajsmith607/winecube](https://github.com/ajsmith607/winecube)
+
+{{< figure src="/portfolio/images/cube/screenshot.png" width="800" class="image" >}}
+
+Wine Cube is an OpenSCAD system for designing simple, modular, high density, passive storage shelving units for standard 750ml wine bottles. My original concept, code, design and copy.
+
+My motivation for creating Wine Cube is explored in my blog post: [Wine Cube: Simple Wine Bottle Storage Model](http://ajsmith.co/articles/wine-cube/).
+
+
+## cell
+
+The Wine Cube project uses a custom font that I designed called {{% pagelink "cell" "Cell" %}}. The following is a logo concept for the font that uses the font's glyphs and is inspired by the abstract art of Piet Mondrian.
+
+{{< figure src="/articles/cell/logo.svg" width="500" class="image" >}}
+
+
 ## Mitime
 
 [thisismitime.com](http://thisismitime.com)<br> 
-https://github.com/ajsmith607/thisismitime
-https://github.com/ajsmith607/mitimer
+[github.com/ajsmith607/thisismitime](https://github.com/ajsmith607/thisismitime)<br>
+[github.com/ajsmith607/mitimer](https://github.com/ajsmith607/mitimer)
 
 {{< figure src="/portfolio/images/mitime/home-desktop.png" width="800" class="image" >}}
 
@@ -41,7 +67,7 @@ Responsive Hugo site hosted on Github Pages with custom Hugo modules that use Ja
 ## M. E. Mills
 
 [memills.com](http://memills.com)<br>
-https://github.com/ajsmith607/memills
+[github.com/ajsmith607/memills](https://github.com/ajsmith607/memills)
  
 {{< figure src="/portfolio/images/memills/screenshot2.jpg" width="800" class="image" >}}
 
@@ -78,7 +104,7 @@ Smith and Mason products were sold at Narrative Space in Ithaca, New York and Go
 
 {{< figure src="/portfolio/images/sm/goat-boy.jpg" width="800" class="image" >}}
 
-<div class="cols">
+<div class="cols" style="margin-top: -36px;">
     {{< figure src="/portfolio/images/sm/narrative-space.jpg" width="350" class="image" >}}
     {{< figure src="/portfolio/images/sm/narrative-space2.jpg" width="350" class="image" >}}
 </div>
