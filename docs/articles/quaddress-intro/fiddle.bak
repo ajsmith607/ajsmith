@@ -1,5 +1,48 @@
      
-<!-- backup of https://jsfiddle.net/asmith607/c4pyzgaq/469/ --> 
+<!-- backup of https://jsfiddle.net/asmith607/c4pyzgaq/487/ --> 
+
+<style>
+:root {
+  --font-family: Tahoma, Verdana, Segoe, sans-serif;
+  --font-size: 20px;
+  --line-height-unitless: 1.5;
+  --line-height: calc(var(--line-height-unitless) * 1rem);
+  --background-color: white;
+  --color: black;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  margin-bottom: calc(var(--line-height) / 2);
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--background-color);
+  color: var(--color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: calc(var(--line-height-unitless) / 2);
+  padding: calc(var(--line-height) / 2);
+}
+
+input,
+button {
+  border: 1;
+  font-family: inherit;
+  font-size: inherit;
+  padding: calc(var(--line-height) / 4);
+  border-radius: calc(var(--line-height) / 4);
+}
+
+#svgcontainer { height: 500px;  }
+g#1 { border: green; }
+
+<style>
 
 <form>
   <label for="quaddress">Quaddress:</label>
@@ -8,7 +51,8 @@
 </form>
 <div id="svgcontainer"></div>
 
-<script>
+
+<script> 
 function buildDivTable(map_px, divs) {
 
   const base_square = {};
@@ -22,7 +66,7 @@ function buildDivTable(map_px, divs) {
   div_table[0] = [base_square];
 
   var ORDER = 2;
-  var border_scale = [8, 5, 3, 1];
+  var border_scale = [20, 12, 6, 1];
 
   for (var div_index = 0; div_index < divs; div_index += 1) {
 
@@ -58,7 +102,6 @@ function drawGrid(div_table, map_px, svgcontainername, divs, quaddress) {
 
   var container = document.querySelector(svgcontainername);
 
-  // remove any previous paths and add a new one
   var svgs = container.getElementsByTagName("svg");
   for (var i = 0; i < svgs.length; i++) {
     svgs[i].remove();
@@ -83,9 +126,9 @@ function drawGrid(div_table, map_px, svgcontainername, divs, quaddress) {
       rect.setAttribute("height", quad.size_px);
       rect.setAttribute("stroke", "black");
       rect.setAttribute("stroke-width", quad.border);
-      var fill = "gray";
+      var fill = "none";
       if (quad.quaddress == quaddress) {
-        fill = "gainsboro";
+        fill = "black";
       }
       rect.setAttribute('fill', fill);
       group.appendChild(rect);
@@ -115,4 +158,5 @@ document.getElementById("submit").onclick = function() {
   drawGrid(div_table, map_px, svgcontainername, divs, quaddress);
   return false;
 }
+
 </script>

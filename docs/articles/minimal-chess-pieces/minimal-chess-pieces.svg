@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     id="chessboard" viewBox="0 0 80 80">
+    <style>
+        svg#chessboard { 
+            --gray: #a9a9a9;
+            --black: black;
+            --white: white;
+            background-color: var(--white);
+            stroke-width: .25;
+            stroke-linecap: round;
+        }
+        rect { stroke: none; }
+        circle { stroke: var(--black); } 
+        .black-army { fill: var(--black); }
+        .white-army { fill: var(--white); }
+    </style>
+    <defs>
+        <symbol id="pawn" viewBox="0 0 10 10"> 
+            <circle cx="5" cy="4.5" r="1" />
+            <circle cx="5" cy="8" r="1" />
+        </symbol>
+        <!-- patterns don't pick up CSS styles from the context they are used in!
+             and can't use currentColor, because it is the "color" (stroke) value 
+             so it won't work for the fill value needed here, as far as I can tell  -->
+        <pattern id="black-pawn-rank" width="10" height="10" patternUnits="userSpaceOnUse">
+            <use href="#pawn" x="0" y="0" width="10" height="10" class="black-army" />
+        </pattern>
+        <pattern id="white-pawn-rank" width="10" height="10" patternUnits="userSpaceOnUse">
+            <use href="#pawn" x="0" y="0" width="10" height="10" class="white-army" />
+        </pattern>
+        <symbol id="rook" viewBox="0 0 10 10"> 
+            <circle cx="2" cy="2" r="1" />
+            <circle cx="8" cy="2" r="1" />
+            <circle cx="2" cy="8" r="1" />
+            <circle cx="8" cy="8" r="1" />
+        </symbol>
+        <symbol id="knight" viewBox="0 0 10 10"> 
+          <circle cx="8" cy="2" r="1" />
+          <circle cx="2" cy="8" r="1" />
+          <circle cx="8" cy="8" r="1" />
+        </symbol>
+        <symbol id="bishop" viewBox="0 0 10 10"> 
+          <circle cx="2" cy="2" r="1" />
+          <circle cx="5" cy="5" r="1" />
+          <circle cx="8" cy="8" r="1" />
+        </symbol>
+        <symbol id="king" viewBox="0 0 10 10"> 
+          <circle cx="5" cy="5" r="1" />
+        </symbol>
+        <symbol id="queen" viewBox="0 0 10 10"> 
+          <circle cx="2" cy="2" r="1" />
+          <circle cx="8" cy="2" r="1" />
+          <circle cx="5" cy="5" r="1" />
+          <circle cx="2" cy="8" r="1" />
+          <circle cx="8" cy="8" r="1" />
+        </symbol>
+        <symbol id="left-back-rank">
+            <use href="#rook" x="0" y="0" width="10" height="10" />
+            <use href="#knight" x="10" y="0" width="10" height="10" />
+            <use href="#bishop" x="20" y="0" width="10" height="10" />
+        </symbol>
+        <symbol id="right-back-rank">
+            <use href="#bishop" x="0" y="0" width="10" height="10"
+                 transform="translate(5,0) scale(-1,1) translate(-5,0)" />
+            <use href="#knight" x="10" y="0" width="10" height="10"
+                 transform="translate(15,0) scale(-1,1) translate(-15,0)" />
+            <use href="#rook" x="20" y="0" width="10" height="10" />
+        </symbol>
+        <pattern id="checkerboard" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect x="10" y="0" width="10" height="10" fill="var(--gray)" />
+            <rect x="0" y="10" width="10" height="10" fill="var(--gray)" />
+        </pattern>
+    </defs>
+    <g id="board">
+        <rect width="80" height="80" fill="url(#checkerboard)" />
+    </g>
+    <g id="pieces">
+        <g class="black-army">
+            <use href="#left-back-rank" x="0" y="0" />
+            <use href="#queen" x="30" y="0" width="10" height="10" />
+            <use href="#king" x="40" y="0" width="10" height="10" />
+            <use href="#right-back-rank" x="50" y="0" />
+            <rect x="0" y="10" width="80" height="10" fill="url(#black-pawn-rank)" />
+        </g>
+        <g class="white-army">
+            <rect x="0" y="60" width="80" height="10" fill="url(#white-pawn-rank)" 
+                  transform="rotate(180, 40, 65)" class="currentColor" />
+            <use href="#right-back-rank" x="0" y="70" 
+                 transform="rotate(180, 15, 75)" /> 
+            <use href="#queen" x="30" y="70" width="10" height="10" />
+            <use href="#king" x="40" y="70" width="10" height="10" />
+            <use href="#left-back-rank" x="50" y="70"
+                 transform="rotate(180, 65, 75)" />
+        </g>
+    </g>
+</svg>

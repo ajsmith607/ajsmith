@@ -1,0 +1,121 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><title>a j smith - Streamlining Static Web Development</title>
+<meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=”robots” content="index, follow"><meta name=msvalidate.01 content><link href=/css/style.min.a30f252376da39b6da6724adcf07635d74474279c996029b767b4a35db9bfd78.css rel=stylesheet integrity="sha256-ow8lI3baObbaZyStzwdjXXRHQnnJlgKbdntKNdub/Xg="><link href=/css/print.css rel=stylesheet media=print><script src=https://code.jquery.com/jquery-3.6.0.slim.min.js crossorigin=anonymous integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="></script><script src=/js/stupidtable.min.js></script><script src=/js/smartquotes.js></script></head><body><header><svg xmlns="http://www.w3.org/2000/svg" class="svg-triangle"><polygon points="0,0 800,0 0,40"/></svg><nav id=menumain><ul><li><a href=https://ajsmith.co/ class=homelink>a j smith</a></li><li><a href=/articles/>Articles</a></li><li><a href=/portfolio/>Portfolio</a></li><li><a href=/contact/>Contact</a></li></ul></nav></header><main class=single><article><h1>Streamlining Static Web Development</h1><div class=meta>Last Update:
+<time datetime="Friday 23 Aug 2024" class=text-muted>Friday 23 Aug 2024</time></div><div class=content><p>There are times when even using Hugo for static web development is overkill. This articles shows how to efficiently develop small static web pages with some of the same advantages as the Hugo environment:</p><ul><li>Easily invoke a zero-configured static web server.</li><li>Optimize development efficiency with LiveReload.</li><li>Automate the environment.</li><li>Optimize for production.</li></ul><p>The solutions described will use <a href=https://nodejs.org/en/>Node.js</a> and Bash scripts.</p><h2 id=easily-invoke-a-zero-configured-static-web-server>Easily Invoke a Zero-Configured Static Web Server</h2><p>There exist readily available ways of invoking a zero-configured static web server that assumes the current working directory is the document root.</p><p>In the Node.js environment, this is accomplished by installing <a href=https://github.com/http-party/http-server>the appropriate package</a>:</p><pre tabindex=0><code>
+npm install -g http-server
+</code></pre><p>A web server can then be invoked by changing to the intended document root and simply running:</p><pre tabindex=0><code>
+http-server &amp; 
+</code></pre><p>The console output:</p><pre tabindex=0><code>
+Starting up http-server, serving ./
+
+http-server version: 14.1.1
+
+http-server settings: 
+CORS: disabled
+Cache: 3600 seconds
+Connection Timeout: 120 seconds
+Directory Listings: visible
+AutoIndex: visible
+Serve GZIP Files: false
+Serve Brotli Files: false
+Default File Extension: none
+
+Available on:
+  http://127.0.0.1:8080
+  http://192.168.1.133:8080
+Hit CTRL-C to stop the server
+</code></pre><p>The web server is now available at localhost:8080.</p><h2 id=optimize-development-efficiency-with-livereload>Optimize Development Efficiency With LiveReload</h2><p>Easily invoking a static web server is obviously very convenient. Now the development process can be greatly optimized by eliminating repeated interruptions to refresh the page under development. This is easily accomplished with an idea inspired by Hugo: <a href=http://livereload.com/>LiveReload</a>.</p><p>In the Node.js environment, install the <a href=https://github.com/napcs/node-livereload>LiveReload server package</a>:</p><pre tabindex=0><code>
+npm install -g livereload
+</code></pre><p>Once again, change to the intended document root, and run <em>livereload</em>, which will start a zero-configured web server that simultaneously serves the livereload script and watches the current working directory for changes.</p><pre tabindex=0><code>
+livereload &amp;
+</code></pre><p>To wire a webpage such as index.html to use LiveReload, the script that communicates with the <em>livereload</em> server must be included in the document <em>head</em>:</p><pre tabindex=0><code>
+&lt;script src=&#34;http://localhost:35729/livereload.js&#34;&gt;&lt;/script&gt;    
+</code></pre><p>A further optimization that isolates the development environment from the production code includes the following alternate code in the page <em>head</em> that conditionally includes the LiveReload script:</p><pre tabindex=0><code>
+&lt;script&gt;
+    // in development, load the livereload script 
+    if (window.location.hostname === &#34;localhost&#34;) {
+        var script = document.createElement(&#39;script&#39;);
+        script.src = &#39;http://localhost:35729/livereload.js&#39;;
+        document.head.appendChild(script);
+    } 
+&lt;/script&gt;
+</code></pre><h2 id=automate-the-environment>Automate the Environment</h2><p>Now, it would be nice to start both web server processes with one command, and this is easy enough to do with a simple bash script that wraps the separate calls:</p><pre tabindex=0><code> 
+#!/bin/bash
+
+livereload &amp;
+http-server &amp;
+</code></pre><p>But it would also be nice to stop both processes with one <em>ctrl-c</em>. This can be accomplished with a slightly more involved bash script:</p><pre tabindex=0><code>
+#!/bin/bash
+
+# Run a static web server in the current working directory
+# and also run a livereload server that watches CWD
+
+# Function to stop both processes
+cleanup() {
+  echo &#34;Stopping processes $PID1 and $PID2&#34;
+  kill &#34;$PID1&#34; &#34;$PID2&#34;
+  wait &#34;$PID1&#34;
+  wait &#34;$PID2&#34;
+}
+
+# Set up a trap to catch signals and run the cleanup function
+trap cleanup SIGINT SIGTERM
+
+# Start the first process and capture the PID
+livereload &amp;
+PID1=$!
+
+# Start the second process and capture the PID
+http-server &amp;
+PID2=$!
+
+echo &#34;Started processes with PIDs $PID1 and $PID2&#34;
+
+# Wait for both processes to finish
+wait $PID1
+wait $PID2
+</code></pre><p>I want to keep this helper script with the rest of the project codebase, but isolated from the main project source code. A common convention is to create a parallel directory, often called <em>bin</em> or <em>scripts</em> (to avoid collisions with existing directories that may already be so named), and then move the bash helper script there.</p><p>It is here that I further optimize the environment by leveraging a tool I already use, <a href=https://direnv.net/>direnv</a>, a simple and easy, yet powerful tool for managing multiple development environments, particularly for JAMStack projects, including Hugo sites.</p><p>In a <em>.envrc</em> file in the project root, simply add:</p><pre tabindex=0><code>
+PATH_add ./bin
+</code></pre><p>Now whenever I enter the directory with the <em>.envrc</em> file, the wrapper script is available in my <em>PATH</em>.</p><p>I highly recommend direnv, however I caution that <strong>because <em>.envrc</em> can contain sensitive information, one should proactively add it to <em>.gitignore</em></strong>.</p><h2 id=optimize-for-production>Optimize For Production</h2><p>To minify files for production, the most straightforward approach is to have a source document directory of files that are directly edited and a separate &ldquo;build&rdquo; directory for the generated, optimized files.</p><p>As an example, assume the target environment is Github Pages, with the common configuration of serving from the <em>docs</em> directory. As a convention, I will do all local development in a parallel directory <em>docsrc</em>. The scripts that follow will create and populate the <em>docs</em> directory.</p><p>Starting with a conventional directory structure for a static web site under <em>docsrc</em>:</p><ul><li>index.html<ul><li>assets/<ul><li>js/<ul><li>main.js</li></ul></li><li>css/<ul><li>main.css</li><li>print.css</li></ul></li><li>images/</li><li>fonts/</li></ul></li></ul></li></ul><p>Install several more tools in the Node.js environment:</p><ul><li><a href=https://github.com/terser/terser>Terser</a>, to minify JavaScript.</li><li><a href=https://github.com/clean-css/clean-css-cli>CleanCSS</a>, to minify CSS.</li><li><a href=https://github.com/kangax/html-minifier>HTML Minifier</a>, to minify HTML.</li></ul><pre tabindex=0><code>
+npm init -y
+npm install -g terser
+npm install -g clean-css-cli
+npm install -g html-minifier
+</code></pre><p>The <em>npm init</em> command creates a <em>package.json</em> file. Within this file, the minification commands are defined:</p><pre tabindex=0><code>
+{
+  &#34;name&#34;: &#34;minify&#34;,
+  &#34;version&#34;: &#34;1.0.0&#34;,
+  &#34;description&#34;: &#34;Minify HTML, JavaScript, and CSS files to prepare for publication. The source is /docsrc and output in /docs.&#34;,
+  &#34;scripts&#34;: {
+    &#34;minify-js&#34;:        &#34;terser docsrc/assets/js/main.js --compress --mangle --output docs/assets/js/main.js&#34;,
+    &#34;minify-cssmain&#34;:   &#34;cleancss -o docs/assets/css/main.css docsrc/assets/css/main.css&#34;,
+    &#34;minify-cssprint&#34;:  &#34;cleancss -o docs/assets/css/print.css docsrc/assets/css/print.css&#34;,
+    &#34;minify-html&#34;:      &#34;html-minifier --input-dir docsrc --output-dir docs --collapse-whitespace --remove-comments --minify-css true --minify-js true --file-ext html&#34;
+  },
+  &#34;dependencies&#34;: {
+    &#34;terser&#34;: &#34;^5.10.0&#34;,
+    &#34;clean-css-cli&#34;: &#34;^5.3.0&#34;,
+    &#34;html-minifier&#34;: &#34;^4.0.0&#34;
+  }
+}
+</code></pre><p>These scripts are then invoked from a bash script in <em>bin/publish.sh</em>, that properly populates the <em>docs</em> production target.</p><pre tabindex=0><code>
+#!/bin/bash
+
+source_base_dir=&#34;docsrc&#34;
+target_base_dir=&#34;docs&#34;
+
+rm -rf &#34;$target_base_dir&#34; 
+
+mkdir -p &#34;$target_base_dir/assets/fonts&#34;
+cp -r &#34;$source_base_dir/assets/fonts&#34; &#34;$target_base_dir/assets/&#34;
+
+mkdir -p &#34;$target_base_dir/assets/img&#34;
+cp -r &#34;$source_base_dir/assets/img&#34; &#34;$target_base_dir/assets/&#34;
+
+mkdir -p &#34;$target_base_dir/assets/js&#34;
+mkdir -p &#34;$target_base_dir/assets/css&#34;
+
+npm run minify-js 
+npm run minify-cssmain
+npm run minify-cssprint
+npm run minify-html
+</code></pre></div><nav class=tags><ul><li><a href=/tags/design>design</a></li><li><a href=/tags/bash>bash</a></li><li><a href=/tags/jamstack>jamstack</a></li><li><a href=/tags/github-pages>github-pages</a></li></ul></nav></article></main><aside><div><div><h3>LATEST POSTS</h3></div><div><ul><li><a href=/articles/minimal-chess-pieces/>Pip: Minimal Two-Dimensional Chess Piece Set</a></li><li><a href=/articles/wine-cube/>Wine Cube: simple wine bottle storage model</a></li><li><a href=/articles/cell/>cell: minimal geometric font</a></li><li><a href=/articles/static-development-streamlining/>Streamlining Static Web Development</a></li><li><a href=/articles/comparing-facial-symmetry/>comparing facial symmetry between photographs</a></li></ul></div></div></aside><footer><p clas=copyright>&copy; <span id=cwyear></span> <a href=https://ajsmith.co/>a j smith</a></p><script>document.getElementById("cwyear").innerHTML=(new Date).getFullYear()</script></footer></body></html>

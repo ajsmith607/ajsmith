@@ -1,0 +1,59 @@
+<svg id="cell-logo" viewBox="0 0 7 8" xmlns="http://www.w3.org/2000/svg">
+  <style>
+      #cell-logo {
+          --stroke-width:   .16;
+          --black:          black;
+          --white:          white;
+          --red:            #ff0000;
+          --blue:           #0000ff;
+          width:            60%;
+          height:           auto;
+          background-color: var(--white); 
+          stroke-width:     var(--stroke-width);
+          stroke:           var(--black);
+          stroke-linecap:   square;
+        }
+  </style>
+  
+  <g id="c" stroke-width="calc(var(--stroke-width) * 2)" >
+      <line x1="1" y1="1" x2="5.5" y2="1" />
+      <line x1="1" y1="1" x2="1" y2="7" />
+      <line x1="1" y1="7" x2="5.5" y2="7" />
+  </g>
+ 
+  <g id="e">
+      <rect x="2" y="2" 
+            width="3" height="2" 
+            stroke="var(--blue)"
+            fill="var(--blue)" />   
+
+      <line x1="2" y1="2" x2="5" y2="2" />
+      <line x1="2" y1="2" x2="2" y2="4" />
+      <line x1="3.2" y1="3" x2="5.6" y2="3" 
+            fill="var(--white)"
+            stroke="var(--white)"
+            stroke-width="calc(var(--stroke-width) / 2)" />
+      <line x1="2" y1="4" x2="5" y2="4" />
+  </g>
+  
+  <g id="l1">
+      <rect x="2" y="5" 
+            width="1" height="1" 
+            stroke="var(--red)"
+            fill="var(--red)" />   
+      
+      <line x1="2" y1="5" x2="2" y2="6" />
+      <line x1="2" y1="6" x2="3" y2="6" />
+  </g>
+
+  <g id="l2">
+      <rect x="4" y="5" 
+            width="1" height="1" 
+            stroke="var(--red)"
+            fill="var(--red)" />   
+      
+      <line x1="4" y1="5" x2="4" y2="6" />
+      <line x1="4" y1="6" x2="5" y2="6" />
+  </g>
+
+</svg>
