@@ -27,9 +27,9 @@ Deedmapify allows anyone to easily create and analyze accurate survey maps based
 
 ## pip
 
-The following is an imagined logo design for a minimal, functional chess piece set concept I created that resembles the faces of dice, called {{% pagelink "minimal-chess-pieces" "pip" %}}. 
+{{< figure src="/articles/minimal-chess-pieces/pip-logo.svg" width="500" class="image" >}}
 
-{{< figure src="/articles/minimal-chess-pieces/pip-logo.svg" width="500" >}}
+An imagined logo design for a minimal, functional chess piece set concept I created that resembles the faces of dice, called {{% pagelink "minimal-chess-pieces" "pip" %}}. 
 
 
 ## Wine Cube
@@ -41,14 +41,15 @@ The following is an imagined logo design for a minimal, functional chess piece s
 
 Wine Cube is an OpenSCAD system for designing simple, modular, high density, passive storage shelving units for standard 750ml wine bottles. My original concept, code, design and copy.
 
-My motivation for creating Wine Cube is explored in my blog post: [Wine Cube: Simple Wine Bottle Storage Model](http://ajsmith.co/articles/wine-cube/).
+My motivation for creating Wine Cube is explored in my blog post: {{% pagelink "wine-cube" %}}.
 
 
 ## cell
 
+{{< figure src="/articles/cell/logo.svg" width="500" class="image" >}}
+
 The Wine Cube project uses a custom font that I designed called {{% pagelink "cell" "Cell" %}}. The following is a logo concept for the font that uses the font's glyphs and is inspired by the abstract art of Piet Mondrian.
 
-{{< figure src="/articles/cell/logo.svg" width="500" class="image" >}}
 
 
 ## Mitime

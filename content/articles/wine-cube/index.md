@@ -79,4 +79,4 @@ Using OpenSCAD,I finally started making significant progress on my project, and 
 
 ## Related
 
-<p><a href="http://ajsmith.co/articles/cell/">Cell: Minimal Geometric Font</a>. This blog post describes the font used in the Wine Cube logo. </p>
+{{% pagelink "cell" %}}. This blog post describes the font used in the Wine Cube logo. </p>
