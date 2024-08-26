@@ -14,9 +14,7 @@ Cell is a minimal, geometric, sans-serif, monospace, all caps display font.
 
 (The Cell logo above uses Cell glyphs and draws inspiration from the abstract art of Piet Mondrian.)
 
-The Cell font was created as part of the design of the [Wine Cube](https://ajsmith607.github.io/winecube/) project.
-
-I sought to create a rectilinear geometric font for use with my Wine Cube project. Beginning with the basic proportions from that project, I originally started with a font that uniformly used 4 strokes in a 4x4 grid, with a 1:4 ratio of stroke thickness to stroke length. I kept making this initial concept more abstract, adjusting for visual clarity, etc. But the ultimate goal was to severely constrain the size of each glyph, use minimal strokes, and leverage negative space to hopefully create a unique minimal font.
+I sought to create a rectilinear geometric font for use with my [Wine Cube](https://ajsmith607.github.io/winecube/) project. Beginning with the basic proportions from that project, I originally started with a font that uniformly used 4 strokes in a 4x4 grid, with a 1:4 ratio of stroke thickness to stroke length. I kept making this initial concept more abstract, adjusting for visual clarity, etc. But the ultimate goal was to severely constrain the size of each glyph, use minimal strokes, and leverage negative space to hopefully create a unique minimal font.
 
 For the mock-ups below, the font follows a few basic rules:
 
