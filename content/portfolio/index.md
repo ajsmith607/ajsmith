@@ -48,7 +48,7 @@ My motivation for creating Wine Cube is explored in my blog post: {{% pagelink "
 
 {{< figure src="/articles/cell/logo.svg" width="500" class="image" >}}
 
-The Wine Cube project uses a custom font that I designed called {{% pagelink "cell" "Cell" %}}. The following is a logo concept for the font that uses the font's glyphs and is inspired by the abstract art of Piet Mondrian.
+The Wine Cube project uses a custom font that I specifically designed for it: {{% pagelink "cell" "Cell" %}}. Cell's glyphs reflect the proportions of Wine Cube. The image above is a logo concept for the font that uses the font's glyphs and is inspired by the abstract art of Piet Mondrian.
 
 
 
