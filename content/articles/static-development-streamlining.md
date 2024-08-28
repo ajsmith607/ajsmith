@@ -164,7 +164,7 @@ wait $PID2
 
 I want to keep this helper script with the rest of the project codebase, but isolated from the main project source code. A common convention is to create a parallel directory, often called *bin* or *scripts* (to avoid collisions with existing directories that may already be so named), and then move the bash helper script there.  
 
-It is here that I further optimize the environment by leveraging a tool I already use, [direnv](https://direnv.net/), a simple and easy, yet powerful tool for managing multiple development environments, particularly for JAMStack projects, including Hugo sites.
+It is here that I further optimize the environment by leveraging a tool I already use, [direnv](https://direnv.net/), a simple and easy, yet powerful tool for managing multiple development environments, particularly for JAMStack projects, such as Hugo-based sites.
 
 In a *.envrc* file in the project root, simply add:
 

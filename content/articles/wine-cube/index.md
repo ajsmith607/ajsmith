@@ -27,7 +27,7 @@ I addressed these challenges in two ways: by designing the shelves to densely st
 
 I then satisfied one other requirement: to learn CAD to design the structure. Learning CAD had long been a goal of mine, and this simple structure, consisting of a small number of wood pieces all arranged at right angles, seemed an ideal project to help introduce me to CAD. 
 
-The structure I designed and intended to build is brutally simple, high density, vertically oriented shelving in the shape of a cube with access from two sides to optimize an open space and allow for flexible arrangement of multiple units. 
+The structure I designed and intendeto build is brutally simple, high density, vertically oriented shelving in the shape of a cube with access from two sides to optimize an open space and allow for flexible arrangement of multiple units. 
 
 An illustration with the top panel shifted to reveal the structure:
 
@@ -72,7 +72,7 @@ So, I began searching for a code-oriented CAD alternative and found several poss
 
 OpenSCAD is a long-lived, robust, and well supported open source project that offered exactly the solution I was looking for. Its programming syntax is very C-like and along with its straightforward API for creating geometric forms, I only needed a few moments to read a few of the many code examples supplied, and I was quickly writing significant amounts of code and seeing immediate results. I was also able to work within my normal development environment, <em>vi</em>, and use all its conveniences. Additionally, OpenSCAD has a live preview feature along with a real-time console for debugging purposes, and this instant feedback allowed me to very quickly build the structure with code that was demonstrably correct. 
 
-(This ability to code with a live preview and console is similar to how Hugo based websites are built using LiveUpdate.)
+(This ability to code with a live preview and console is similar to how Hugo based websites are built using LiveReload.)
 
 Using OpenSCAD,I finally started making significant progress on my project, and I was also more naturally learning CAD in the process, exactly as I had hoped.
 
