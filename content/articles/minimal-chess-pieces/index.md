@@ -72,7 +72,7 @@ Lacking metaphor as an organizing framework, metaphor must be added, and when lo
 
 The metaphor of chess is simple and elegant, as wars and hierarchical social and political power structures are universally understood. By leveraging existing cultural knowledge, the rules of chess are understood within existing conceptual structures so deeply engrained as to be intuitive.
 
-Chess is also a special case because of its success, and in turn, its profound impact on human culture. Chess terms and phrases are commonly used even by non-players. So while pip was an interesting exploration for me, I think it may ultimately undermine what is an essential aspect of chess as we understand it, and is therefore, at least as I have envisioned it, it seems fundamentally un-chess-like.
+Chess is also a special case because of its success, and in turn, its profound impact on human culture. Chess terms and phrases are commonly used even by non-players. So while pip was an interesting exploration for me, I think it may ultimately undermine what is an essential aspect of chess as we understand it, and therefore seems, at least as I have envisioned it, fundamentally un-chess-like.
 
 Perhaps this is why every "minimal" or "abstract" chess piece set of which I am aware, are visual abstractions of piece names.
 
