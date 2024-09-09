@@ -2,7 +2,6 @@
 title: "Streamlining Static Web Development"
 date: 2024-07-24  
 tags:
-- design
 - bash
 - jamstack
 - github-pages

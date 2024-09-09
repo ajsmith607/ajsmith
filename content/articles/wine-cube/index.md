@@ -2,6 +2,8 @@
 title: "Wine Cube: simple wine bottle storage model"
 date: 2024-07-29
 tags:
+- design
+- cad
 draft: false
 ---
 
@@ -27,26 +29,26 @@ I addressed these challenges in two ways: by designing the shelves to densely st
 
 I then satisfied one other requirement: to learn CAD to design the structure. Learning CAD had long been a goal of mine, and this simple structure, consisting of a small number of wood pieces all arranged at right angles, seemed an ideal project to help introduce me to CAD. 
 
-The structure I designed and intendeto build is brutally simple, high density, vertically oriented shelving in the shape of a cube with access from two sides to optimize an open space and allow for flexible arrangement of multiple units. 
+The structure I designed and intended to build is brutally simple, high density, vertically oriented shelving in the shape of a cube with access from two sides to optimize an open space and allow for flexible arrangement of multiple units. 
 
 An illustration with the top panel shifted to reveal the structure:
 
 {{< figure src="/articles/wine-cube/V128-35x35x35-222-uqa.png" class="image" >}}
 
-I then began refining the code so that Wine Cube can now be configured to be various dimensions, with both wall and freestanding shelving and the ability to accommodate either vertical or horizontal bottle orientations, among other options. 
+I then began refining the code so that Wine Cube can now be configured to be various dimensions, with both wall and freestanding shelving options and the ability to accommodate either vertical or horizontal bottle orientations, among other options. 
 
 
 ## The Model
 
-A central assumption of Wine Cube is that standard 750ml wine bottles are what is being stored, allowing for space optimization by defining a standard space that is constrained as much as possible while remaining adequate, facilitating highly dense storage. 
+A central assumption of Wine Cube is that standard 750ml wine bottles are being stored, allowing for space optimization by defining a standard space that is constrained as much as possible while remaining adequate, facilitating highly dense storage. 
 
 But obviously, there are "standard" bottles of differing styles, with different shapes and slightly different dimensions, and I reviewed the specifications of a number of common bottle variations, such as those shown in the following chart from [The Cary Company](https://www.thecarycompany.com):
 
 {{< figure src="/articles/wine-cube/wine-bottle-size-chart.jpg" class="image" >}}
 
-To accommodate the range of likely bottle sizes, I decided the standard bottle space would have a 4 inch diameter footprint. There is greater variability in bottle height, and because bottles are often accessed and manipulated by the bottle neck, I wanted to allow a little extra room to make this more convenient, eventually deciding to make the empty bottle space be 16 inches in height. In other words, this additional vertical clearance not only mitigates variations in bottle height, but makes room in the space for a person's hand to access the bottle, and provides additional room for manipulating the bottle in a densely packed spaced, allowing more room to angle the bottle when it is removed, for example.
+To accommodate the range of likely bottle sizes, I decided the standard bottle space would have a 4 inch diameter footprint. There is greater variability in bottle height, and because bottles are often accessed and manipulated by the bottle neck, I wanted to allow a little extra room to make this more convenient, eventually deciding to make the empty bottle space 16 inches in height. In other words, this additional vertical clearance not only mitigates variations in bottle height, but makes room in the space for a person's hand to access the bottle, and provides additional room for manipulating the bottle in a densely packed spaced, allowing more room to angle the bottle when it is removed, for example.
 
-By defining the maximum bounding box for this space, it can be translated into rectilinear shelving space. Therefore, the width and depth of the standard wine bottle space is 4x4 inches, or 16 inches square, extending to a height that is also 4x4, or 16 inches. Additionally, my research suggests that a weight of 4 pounds is a reasonable approximate estimated weight for the space, accounting for the 750ml of wine as well its glass container, "cork", and labelling. These dimensions define the standard wine bottle space, the fundamental unit of Wine Cube.
+By defining the maximum bounding box for this space, it can be translated into rectilinear shelving space. Therefore, the width and depth of the standard wine bottle space is 4x4 inches, or 16 inches square, extending to a height that is also 4x4, or 16 inches. Additionally, my research suggests that a weight of 4 pounds is a reasonable approximate estimated weight for the space, accounting for the 750ml of wine as well its glass container, "cork", and labelling. These properties define the standard wine bottle space, the fundamental unit of Wine Cube.
 
 {{< figure src="/articles/wine-cube/bottle-unit.png" class="image" >}}
 
@@ -55,7 +57,7 @@ The ratio of the dimensions of this space is 1:1:4. This means that if the bottl
 
 {{< figure src="/articles/wine-cube/bottle-module.png" class="image" >}}
 
-This organizational concept means that the standard shelf depth of vertically oriented bottles is 4 bottles, which is an ideal depth for a wine bottle shelf at any height. And because the organization is a cube, it is fundamentally agnostic about bottle orientation, even allowing the possibility of *mixing* orientations. This standardized module also supports a variety of shelving configurations, although the system is named for the cube configuration, the configuration that best optimizes an open space. Notice too that given an uninterrupted sequence of whole bottle cubes, the length of a shelf in inches is equal to the shelf's bottle capacity.
+This organizational concept means that the standard shelf depth of vertically oriented bottles is 4 bottles, which is an ideal depth for a wine bottle shelf at any height. And because the organization is a cube, it is fundamentally agnostic about bottle orientation, even allowing the possibility of *mixing* orientations. This standardized module also supports a variety of shelving configurations, although the system is named partly for the cube configuration, the configuration that best optimizes an open space. Notice too that given an uninterrupted sequence of whole bottle cubes, the length of a shelf in inches is equal to the shelf's bottle capacity.
 
 This simple model encapsulates the fundamental constraints of Wine Cube. 
 
@@ -66,7 +68,7 @@ One of my goals with this project was to use it as a way to learn CAD.
 
 I originally set out to use FreeCAD, however, soon became frustrated, as I realized I was spending most of my time learning, and fighting with, its user interface instead of learning CAD itself and building my project. The structure I was imagining was based on specific mathematical relationships, and what I wanted to do was directly describe what those relationships were and then construct the object accordingly, similar to how I have worked in the past in a general programming language such as Javascript to create SVG images. Instead of learning to satisfy the user interface, I just wanted to directly and accurately describe the structure itself.
 
-My misgivings were further solidified when working with constraints, which seemed to only partially solve the problem, as often rules were boiled down to simple tests and outcomes, and these still had to be manually specified within an arbitrary user interface. I wanted my structure to be built from mathematical relationships, so the constraints would be implicitly enforced as part of unambiguously interpreting and building the structure I wanted to describe. To be fair, I believe FreeCAD offers at least some scripting capabilities, but I wanted something with a fundamentally different approach.
+My misgivings were further solidified when working with constraints, which seemed to only partially solve the problem, as often rules were boiled down to simple tests and outcomes, and these still had to be manually specified within an arbitrary user interface. I wanted my structure to be built from mathematical relationships, so the constraints would be implicitly enforced as part of unambiguously interpreting and building the structure I wanted to describe. To be fair, I believe FreeCAD offers at least some scripting capabilities, but I wanted something with a fundamentally different approach. My issues were not with FreeCAD per se, but with the inconvenience of graphical interfaces in general.
 
 So, I began searching for a code-oriented CAD alternative and found several possibilities, but the one I quickly settled on was [OpenSCAD](https://openscad.org/).
 
@@ -74,7 +76,7 @@ OpenSCAD is a long-lived, robust, and well supported open source project that of
 
 (This ability to code with a live preview and console is similar to how Hugo based websites are built using LiveReload.)
 
-Using OpenSCAD,I finally started making significant progress on my project, and I was also more naturally learning CAD in the process, exactly as I had hoped.
+Using OpenSCAD, I finally started making significant progress on my project, and I was also more naturally learning CAD in the process, exactly as I had hoped.
 
 
 ## Related
