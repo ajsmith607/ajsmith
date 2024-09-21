@@ -7,13 +7,13 @@ mainid: "portfolio"
 
 A summary of selected projects, present and past.
 
-## The Berry Yard
+## Brookton Berryard
 
 (Planning.)
 
-{{< figure src="/portfolio/images/berry-yard/label-logo.jpg" width="500" class="image" >}}
+{{< figure src="/portfolio/images/berry-yard/berryard.svg" width="800" class="image" >}}
 
-Logo and bottle label mockup for naturally fermented herbaceous wine, produced from local, organically grown blackberries. My original concept and design.
+Logo concept for naturally fermented herbaceous wine, produced from local, organically grown blackberries. My original concept and design.
 
 
 ## Deedmapify 
@@ -29,7 +29,7 @@ Deedmapify allows anyone to easily create and analyze accurate survey maps based
 
 {{< figure src="/articles/minimal-chess-pieces/pip-logo.svg" width="500" class="image" >}}
 
-An imagined logo design for a minimal, functional chess piece set concept I created that resembles the faces of dice, called {{% pagelink "minimal-chess-pieces" "pip" %}}. 
+Imagined logo for a minimal, functional chess piece set concept I created that resembles the faces of dice, called {{% pagelink "minimal-chess-pieces" "pip" %}}. 
 
 
 ## Wine Cube

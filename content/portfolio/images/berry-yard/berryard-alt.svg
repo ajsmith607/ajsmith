@@ -1,0 +1,149 @@
+<svg id="berryard-logo" width="800" height="400" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    svg#berryard-logo {
+        background-color: white;
+        stroke-width: 1;
+        stroke-linecap: round;
+        fill: white;
+        --drupspacefill: white;
+        --drupfill: black; 
+        --purple: #4b0082;
+    }
+    #text { stroke: black; }
+  </style>
+
+  <symbol id="drupelet" viewBox="0 0 2 2"> 
+    <circle cx="1" cy="1" 
+            r="1" 
+            fill="var(--drupspacefill)" />
+    <circle cx="1" cy="1" 
+            r=".8" fill="var(--drupfill)" />
+  </symbol>
+  
+  <symbol id="topdrupelet" viewBox="0 0 2 2"> 
+    <circle cx="1" cy="1" 
+            r="1" fill="var(--drupspacefill)" />
+    <circle cx="1" cy="1" 
+            r=".8" fill="var(--purple)" />
+    
+    <circle cx="1" cy="1" 
+            r=".6" fill="var(--drupspacefill)" />
+    <circle cx=".8" cy="1.1" 
+            r=".6" fill="var(--purple)" />
+  </symbol>
+
+  <symbol id="b" viewBox="0 0 6 8"> 
+    <line x1="1" y1="1" x2="1" y2="7" />
+    <circle cx="3" cy="5" r="2" />
+  </symbol>
+
+  <symbol id="r" viewBox="0 0 4 8"> 
+    <line x1="1" y1="3" x2="1" y2="7" />
+    <path d="M 1,5 
+             A 2,2 0 0 1 3,3" />
+  </symbol>
+
+  <symbol id="o" viewBox="0 0 6 8"> 
+    <circle cx="3" cy="5" r="2" />
+  </symbol>
+
+  <symbol id="k" viewBox="0 0 6 8"> 
+    <line x1="1" y1="1" x2="1" y2="7" />
+    <path d="M 1,5 
+             A 2,2 0 0 0 4,3" />
+    <path d="M 3,5 
+             A 2,2 0 0 1 5,7" />
+  </symbol>
+
+  <symbol id="t" viewBox="0 0 4 8"> 
+    <line x1="1" y1="1" x2="1" y2="5" />
+    <line x1="1" y1="3" x2="3" y2="3" />
+    <path d="M 1,5 
+             A 2,2 0 0 0 3,7" />
+  </symbol>
+
+  <symbol id="n" viewBox="0 0 6 8"> 
+    <line x1="1" y1="3" x2="1" y2="7" />
+    <path d="M 1,5 
+             A 2,2 0 0 1 5,5" />
+    <line x1="5" y1="5" x2="5" y2="7" />
+  </symbol>
+
+  <symbol id="e" viewBox="0 0 6 8"> 
+    <path d="M 3,7 
+             A 2,2 0 1 1 5,5" />
+    <line x1="1" y1="5" x2="5" y2="5" />
+  </symbol>
+
+  <symbol id="a" viewBox="0 0 6 8"> 
+    <line x1="5" y1="3" x2="5" y2="7" />
+    <circle cx="3" cy="5" r="2" />
+  </symbol>
+
+  <symbol id="d" viewBox="0 0 6 8"> 
+    <line x1="5" y1="1" x2="5" y2="7" />
+    <circle cx="3" cy="5" r="2" />
+  </symbol>
+
+  <symbol id="y" viewBox="0 0 8 10"> 
+    <line x1="1" y1="3" x2="1" y2="4" />
+    <path d="M 1,4 
+             A 3,3 0 0 0 7,4"  
+          fill="var(--purple)"/>
+    <line x1="7" y1="3" x2="7" y2="4" />
+    <line x1="4" y1="7" x2="4" y2="9" />
+    <line x1="3" y1="9" x2="5" y2="9" />
+  </symbol>
+
+  <g id="berryard-logo" transform="translate(20,20)">
+      <g id="blackberry" transform="translate(0,0) scale(50)">
+          <use href="#drupelet"    x="1.8" y="3.6"  width="2" height="2" />
+          
+          <use href="#drupelet"    x="1.2" y="2.6"  width="2" height="2" />
+          <use href="#drupelet"    x="2.6" y="2.6"  width="2" height="2" />
+
+          <use href="#drupelet"    x="1"   y="1.6"  width="2" height="2" />
+          <use href="#drupelet"    x="3"   y="1.6"  width="2" height="2" />
+
+          <use href="#topdrupelet" x="2"   y="1"    width="2" height="2" />
+      </g> 
+
+      <g id="text" transform="translate(260,95) scale(10)">
+          <g id="brookton">
+              <use href="#b" x="0"    width="6" height="8"  />
+              <use href="#r" x="6"    width="4" height="8"  />
+              <use href="#o" x="9.5"  width="6" height="8"  />
+              <use href="#o" x="15.5" width="6" height="8"  />
+              <use href="#k" x="21.5" width="6" height="8"  />
+              <use href="#t" x="27.5" width="4" height="8"  />
+              <use href="#o" x="31.5" width="6" height="8"  />
+              <use href="#n" x="37.5" width="6" height="8"  />
+          </g>
+          <g id="berryard" transform="translate(0,10)">
+              <use href="#b" x="0"    width="6" height="8"  />
+              <use href="#e" x="6"    width="6" height="8"  />
+              <use href="#r" x="12"   width="4" height="8"  />
+              <use href="#r" x="16"   width="4" height="8"  />
+              <use href="#y" x="20"   width="8" height="10" />
+              <use href="#a" x="28"   width="6" height="8"  />
+              <use href="#r" x="34"   width="4" height="8"  />
+              <use href="#d" x="37.5" width="6" height="8"  />
+          </g>
+      </g>
+  </g>
+  
+  <g id="rules" stroke-width="0" stroke="red">
+    <g id="horiz">
+        <line x1="0" y1="60" x2="800" y2="60" />
+        <line x1="0" y1="90" x2="800" y2="90" />
+        <line x1="0" y1="170" x2="800" y2="170" />
+        <line x1="0" y1="220" x2="800" y2="220" />
+        <line x1="0" y1="270" x2="800" y2="270" />
+    </g>
+    <g id="vert">
+        <line x1="100" y1="0" x2="100" y2="800" />
+    </g>
+  </g>
+
+</svg>
