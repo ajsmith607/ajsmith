@@ -24,7 +24,7 @@ An individual chess board square is a small canvas on which to paint, and the de
 
 <figcaption>
 
-– [pip](https://www.merriam-webster.com/dictionary/pip), merriaum-webster.com.
+– [pip](https://www.merriam-webster.com/dictionary/pip), merriam-webster.com.
 
 </figcaption>
 </figure>
