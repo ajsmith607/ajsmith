@@ -111,25 +111,27 @@
           <use href="#topdrupelet" x="2"   y="1"    width="2" height="2" />
       </g> 
 
-      <g id="brookton">
-          <use href="#b" x="0"    width="6" height="8"  />
-          <use href="#r" x="6"    width="4" height="8"  />
-          <use href="#o" x="9.5"  width="6" height="8"  />
-          <use href="#o" x="15.5" width="6" height="8"  />
-          <use href="#k" x="21.5" width="6" height="8"  />
-          <use href="#t" x="27.2" width="4" height="8"  />
-          <use href="#o" x="31" width="6" height="8"  />
-          <use href="#n" x="37" width="6" height="8"  />
-      </g>
-      <g id="berryard" transform="translate(0,8)">
-          <use href="#b" x="0"    width="6" height="8"  />
-          <use href="#e" x="6"    width="6" height="8"  />
-          <use href="#r" x="12"   width="4" height="8"  />
-          <use href="#r" x="15.5"   width="4" height="8"  />
-          <use href="#y" x="19.7"   width="8" height="10" />
-          <use href="#a" x="27.7"   width="6" height="8"  />
-          <use href="#r" x="33.7"   width="4" height="8"  />
-          <use href="#d" x="37" width="6" height="8"  />
+      <g id="text" transform="translate(250,95) scale(10)">
+          <g id="brookton">
+              <use href="#b" x="0"    width="6" height="8"  />
+              <use href="#r" x="6"    width="4" height="8"  />
+              <use href="#o" x="9.5"  width="6" height="8"  />
+              <use href="#o" x="15.5" width="6" height="8"  />
+              <use href="#k" x="21.5" width="6" height="8"  />
+              <use href="#t" x="27.2" width="4" height="8"  />
+              <use href="#o" x="31" width="6" height="8"  />
+              <use href="#n" x="37" width="6" height="8"  />
+          </g>
+          <g id="berryard" transform="translate(0,8)">
+              <use href="#b" x="0"    width="6" height="8"  />
+              <use href="#e" x="6"    width="6" height="8"  />
+              <use href="#r" x="12"   width="4" height="8"  />
+              <use href="#r" x="15.5"   width="4" height="8"  />
+              <use href="#y" x="19.7"   width="8" height="10" />
+              <use href="#a" x="27.7"   width="6" height="8"  />
+              <use href="#r" x="33.7"   width="4" height="8"  />
+              <use href="#d" x="37" width="6" height="8"  />
+          </g>
       </g>
 
       <g id="rules" stroke-width="0" stroke="red">
