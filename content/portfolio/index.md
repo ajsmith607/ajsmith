@@ -58,7 +58,7 @@ The Wine Cube project uses a custom font that I specifically designed for it: {{
 [github.com/ajsmith607/thisismitime](https://github.com/ajsmith607/thisismitime)<br>
 [github.com/ajsmith607/mitimer](https://github.com/ajsmith607/mitimer)
 
-{{< figure src="/portfolio/images/mitime/home-desktop.png" width="800" class="image" >}}
+{{< figure src="/portfolio/images/mitime/home-desktop2.png" width="800" class="image" >}}
 
 Mitime (pronounced "my time") is a minimal metastructure mapped over standard time that counts down available time in a day to organize time more effectively. My original concept, design, code and copy.
 
