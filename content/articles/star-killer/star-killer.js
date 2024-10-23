@@ -1,5 +1,13 @@
 function rounddown (value) { return (value) ? parseFloat(value.toFixed(2)) : value ;} 
 function degstorads (degrees) { return degrees * (Math.PI / 180); }
+function GetDistanceBetweenVertices(vertices) {
+    vertices = vertices.split(" ");
+    let [x1,y1] = vertices[0].split(",");
+    let [x2,y2] = vertices[1].split(",");
+    const xdiff = x1 - x2;
+    const ydiff = y1 - y2;
+    return rounddown(Math.sqrt( (xdiff ** 2) + (ydiff ** 2 ) ));
+}
 
 const svgns = "http://www.w3.org/2000/svg";
 function initsvg(svgcontainername, svgsize) {
@@ -65,10 +73,12 @@ function rotateVertices(vertices, centerX, centerY, angle) {
 }
 
 function drawpolygon(radius=5, order=5, step=1, depthlevel=1, style="") {
+    console.log("radius: " + radius + ", order: " + order+ ", step: " + step);
     const polygon = document.createElementNS(svgns, "polygon");
     let currentScaling = depthlevel == 1 ? startscale : startscale / Math.pow(scalefactor, depthlevel - 1);
     let points = getvertices(radius, order, currentScaling);
     points = sortvertices(points, step);
+    console.log("depthlevel: " + depthlevel + ", currentScaling: " + currentScaling + ", distance: " + GetDistanceBetweenVertices(points));
     if (depthlevel % 2 == 0) { points = rotateVertices(points, centerx, centery, degstorads(180)); }
     polygon.setAttribute("points", points);
     polygon.setAttribute("class", style);

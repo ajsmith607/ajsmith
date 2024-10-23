@@ -11,6 +11,8 @@ Wine Cube is a simple, configurable OpenSCAD based system for creating passive, 
 
 <!--more-->
 
+<img src="/articles/wine-cube/wine-cube.svg" class="image">
+
 [Wine Cube Official Site](https://ajsmith607.github.io/winecube/) (ajsmith607.github.io/winecube)
 
 [Wine Cube Github Repository](https://github.com/ajsmith607/winecube) (github.com/ajsmith607/winecube)
@@ -53,7 +55,7 @@ By defining the maximum bounding box for this space, it can be translated into r
 {{< figure src="/articles/wine-cube/bottle-unit.png" class="image" >}}
 
 
-The ratio of the dimensions of this space is 1:1:4. This means that if the bottles are arranged in a 4x4 square matrix, the total resulting space is a perfect cube, 16 inches along each axis, containing 16 bottles. This module is the fundamental organizing concept of Wine Cube.
+The ratio of the dimensions of this space is 1:1:4. This means that if the bottles are arranged in a 4x4 square matrix, the total resulting space is a perfect cube, 16 inches along each axis, and a 16 bottle capacity. This module is the fundamental organizing concept of Wine Cube.
 
 {{< figure src="/articles/wine-cube/bottle-module.png" class="image" >}}
 
@@ -68,13 +70,13 @@ One of my goals with this project was to use it as a way to learn CAD.
 
 I originally set out to use FreeCAD, however, soon became frustrated, as I realized I was spending most of my time learning, and fighting with, its user interface instead of learning CAD itself and building my project. The structure I was imagining was based on specific mathematical relationships, and what I wanted to do was directly describe what those relationships were and then construct the object accordingly, similar to how I have worked in the past in a general programming language such as Javascript to create SVG images. Instead of learning to satisfy the user interface, I just wanted to directly and accurately describe the structure itself.
 
-My misgivings were further solidified when working with constraints, which seemed to only partially solve the problem, as often rules were boiled down to simple tests and outcomes, and these still had to be manually specified within an arbitrary user interface. I wanted my structure to be built from mathematical relationships, so the constraints would be implicitly enforced as part of unambiguously interpreting and building the structure I wanted to describe. To be fair, I believe FreeCAD offers at least some scripting capabilities, but I wanted something with a fundamentally different approach. My issues were not with FreeCAD per se, but with the inconvenience of graphical interfaces in general.
+My misgivings were further solidified when working with constraints, which seemed to only partially solve the problem, as often rules were boiled down to simple tests and outcomes, and these still had to be manually specified within an arbitrary user interface. I wanted my structure to be built from mathematical relationships, so the constraints would be implicitly enforced as part of unambiguously interpreting and building the structure I wanted to describe. To be fair, FreeCAD's user interface is probably very well designed for its purpose and not more difficult to use than competing software, and I believe FreeCAD offers at least some scripting capabilities, but I wanted something with a fundamentally different approach. My issues were not with FreeCAD per se, but with the inconvenience of graphical interfaces in general.
 
 So, I began searching for a code-oriented CAD alternative and found several possibilities, but the one I quickly settled on was [OpenSCAD](https://openscad.org/).
 
-OpenSCAD is a long-lived, robust, and well supported open source project that offered exactly the solution I was looking for. Its programming syntax is very C-like and along with its straightforward API for creating geometric forms, I only needed a few moments to read a few of the many code examples supplied, and I was quickly writing significant amounts of code and seeing immediate results. I was also able to work within my normal development environment, <em>vi</em>, and use all its conveniences. Additionally, OpenSCAD has a live preview feature along with a real-time console for debugging purposes, and this instant feedback allowed me to very quickly build the structure with code that was demonstrably correct. 
+OpenSCAD is a long-lived, robust, and well supported open source project that offered exactly the solution I was looking for. Its programming syntax is very C-like and along with its straightforward API for creating geometric forms, I only needed a few moments to read a few of the many code examples supplied, and I was quickly writing significant amounts of code and seeing immediate results. I was also able to work within my normal development environment, <em>vi</em>, (nvim) and use all its conveniences. Additionally, OpenSCAD has a live preview feature along with a real-time console for debugging purposes, and this instant feedback allowed me to very quickly build the structure with code that was demonstrably correct. 
 
-(This ability to code with a live preview and console is similar to how Hugo based websites are built using LiveReload.)
+(This ability to code with a live preview and console is similar to how Hugo based websites are built using LiveReload. For an approach I have used for developing static websites without Hugo, see {{% pagelink "static-development-streamlining" %}}).
 
 Using OpenSCAD, I finally started making significant progress on my project, and I was also more naturally learning CAD in the process, exactly as I had hoped.
 

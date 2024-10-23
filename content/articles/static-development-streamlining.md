@@ -3,6 +3,7 @@ title: "Streamlining Static Web Development"
 date: 2024-07-24  
 tags:
 - bash
+- nodejs
 - jamstack
 - github-pages
 ---
@@ -20,7 +21,7 @@ The solutions described will use [Node.js](https://nodejs.org/en/) and Bash scri
 
 ## Easily Invoke a Zero-Configured Static Web Server
 
-There exist readily available ways of invoking a zero-configured static web server that assumes the current working directory is the document root.
+Depending on the environment, there are readily available ways of invoking a zero-configured static web server that assumes the current working directory is the document root.
 
 In the Node.js environment, this is accomplished by installing [the appropriate package](https://github.com/http-party/http-server):
 

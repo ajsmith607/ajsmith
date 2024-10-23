@@ -58,6 +58,14 @@ The number of pips also aligns well with the standard relative value of pieces, 
 | <svg id="rook" viewBox="0 0 10 10" width="40"> <circle cx="2" cy="2" r="1" /> <circle cx="8" cy="2" r="1" /> <circle cx="2" cy="8" r="1" /> <circle cx="8" cy="8" r="1" /> </svg> | rook | 5 | 4 |
 | <svg id="queen" viewBox="0 0 10 10" width="40"> <circle cx="2" cy="2" r="1" /> <circle cx="8" cy="2" r="1" /> <circle cx="5" cy="5" r="1" /> <circle cx="2" cy="8" r="1" /> <circle cx="8" cy="8" r="1" /> </svg> | queen | 9 | 5 |
 
+<!--
+<figcaption>
+
+  - (Consider sequence formula for sorted pip counts: f(n) = [n x 0.5 +2] .)
+
+</figcaption>
+-->
+
 </figure>
 
 I believe this functional approach *can* result in more intuitive piece recognition, and also provide an educational benefit for new players, even if my specific implementation of such an approach is not ideal. 
