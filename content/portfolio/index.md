@@ -24,6 +24,15 @@ Logo concept for naturally fermented herbaceous wine, produced from local, organ
 
 Deedmapify allows anyone to easily create and analyze accurate survey maps based on legal deed descriptions. My original concept, code, design and copy.
 
+## Reflexion
+
+[ajsmith607.github.io/reflexion](https://ajsmith607.github.io/reflexion/)<br>
+[github.com/ajsmith607/reflexion](https://github.com/ajsmith607/reflexion)
+
+{{< figure src="/portfolio/images/reflexion/thumbnail.png" width="500" class="image" >}}
+
+A logotype nano-exhibit.
+
 
 ## pip
 
@@ -58,7 +67,7 @@ The Wine Cube project uses a custom font that I specifically designed for it: {{
 [github.com/ajsmith607/thisismitime](https://github.com/ajsmith607/thisismitime)<br>
 [github.com/ajsmith607/mitimer](https://github.com/ajsmith607/mitimer)
 
-{{< figure src="/portfolio/images/mitime/home-desktop2.png" width="800" class="image" >}}
+{{< figure src="/portfolio/images/mitime/home-desktop.png" width="800" class="image" >}}
 
 Mitime (pronounced "my time") is a minimal metastructure mapped over standard time that counts down available time in a day to organize time more effectively. My original concept, design, code and copy.
 
