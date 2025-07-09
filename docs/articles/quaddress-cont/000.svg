@@ -1,0 +1,12 @@
+<svg version="1.1" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <text transform="matrix(1.2251 0 0 1.2251 13.8 13.8)" style="font-family:BUKA;font-size:40px;letter-spacing:0px;line-height:1.25;shape-inside:url(#rect4599);white-space:pre;word-spacing:0px" xml:space="preserve"/>
+  <text x="864.64948" y="-26.716127" style="font-family:BUKA;font-size:49.003px;letter-spacing:0px;line-height:1.25;stroke-width:1.2251;word-spacing:0px" xml:space="preserve"><tspan x="864.64948" y="-26.716127" style="stroke-width:1.2251"/></text>
+  <rect x="13.8" y="13.8" width="972.4" height="972.4" style="fill:#ffffff;stroke-linecap:round;stroke-linejoin:round;stroke-width:19.601;stroke:#ebaf36"/>
+  <rect x="256.9" y="256.9" width="486.2" height="486.2" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:14.701;stroke:#ebaf36"/>
+  <rect x="378.45" y="378.45" width="243.1" height="243.1" style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:9.8006;stroke:#ebaf36"/>
+  <text x="474.63074" y="167.08276" style="font-family:BUKA;font-size:91.472px;letter-spacing:0px;line-height:1.25;stroke-width:1.2251;word-spacing:0px" xml:space="preserve"><tspan x="474.63074" y="167.08276" style="fill:#ebaf36;font-family:'Liberation Sans';font-size:91.472px;font-weight:bold;stroke-width:1.2251">0</tspan></text>
+  <text x="456.45239" y="344.80713" style="font-family:BUKA;font-size:78.405px;letter-spacing:0px;line-height:1.25;stroke-width:1.2251;word-spacing:0px" xml:space="preserve"><tspan x="456.45239" y="344.80713" style="fill:#ebaf36;font-family:'Liberation Sans';font-size:78.405px;font-weight:bold;stroke-width:1.2251">00</tspan></text>
+  <text x="450.98752" y="520.24225" style="font-family:BUKA;font-size:58.803px;letter-spacing:0px;line-height:1.25;stroke-width:1.2251;word-spacing:0px" xml:space="preserve"><tspan x="450.98752" y="520.24225" style="fill:#ebaf36;font-family:'Liberation Sans';font-size:58.803px;font-weight:bold;stroke-width:1.2251">000</tspan></text>
+ </g>
+</svg>
