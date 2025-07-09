@@ -1,6 +1,6 @@
 ---
 title: "quaddresses: imprecision in practice"
-date: 2025-07-
+date: 2025-07-08
 tags:
 - historical-research
 - digitization
