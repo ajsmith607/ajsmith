@@ -7,7 +7,7 @@ tags:
 - metadata 
 ---
 
-After significant time using quaddresses in a real application, I reflect on their effectiveness and propose refinements.  
+After significant time using quaddresses in a real application, I reflect on their effectiveness.  
 
 <!--more-->
 
@@ -46,6 +46,8 @@ But even this best practice can lead to false impressions. If I "accurately" ass
 
 In addition to treating quaddress boundaries as "fuzzy" the best way to mitigate these possible issues is within the intended design of quaddresses themselves: if you need to specify a smaller area of focus, add more divisions. Now, I could still mistakenly assign q221 to A instead of q212, but even with just one additional division, the scan area has been drastically reduced, so the quaddress should work as intended, not as a way to precisely locate a piece of content, but as a way to reduce the scan area so that a resolver can quickly move to the right area of the document at which point, the content should be quickly identifiable without further effort. If this doesn't accurately describe a given quaddress, that strongly indicates a need for additional divisions. 
 
+<!--
+
 ## corners and centers
 
 Notice that one consequence of quaddresses is that consecutive, repeating numbers refer to the corresponding corner within the containing quaddress, immediately prior to the repetition. The more repetitions of a number, the more it indicates that the area referenced is closer to the indicated corner of the "lowest" (?) containing quaddress, farther from its center. Once this is understood, certain quaddresses become even more easily resolved. 
@@ -72,3 +74,7 @@ Recall that quaddresses can be of arbitrary length on a per-use basis, even when
 Also note a design consequence: it does not make sense to make non-zero/quadrant references after zero/center references within a single quaddress. Another way to say this is that all quaddresses end with either an implicit or explicit 0.
 
 My intuition is that center references are more likely to be useful at higher/fewer specified dimensions.  
+
+-->
+
+
