@@ -10,3 +10,6 @@ Following the discovery of several hundred newspapers from the 1930's from the T
 <!--more-->
 
 [Download](/articles/Woodhull-Sentinel-Digitization-Project.pdf) Project Proposal (PDF).
+
+{{< figure src="/articles/1933-06-29-Woodhull-Sentinel-p1.jpg" width="800" class="image" >}}
+
