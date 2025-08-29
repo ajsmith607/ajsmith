@@ -43,9 +43,10 @@ Caitlin, our project representative at Backstage Library Works, has completed an
 
 Between the time when we signed the contract with Backstage and the time when we delivered the materials, Leslie had discovered 22 additional newspaper editions that we included in the final delivery to Backstage. As a result, there was a slight increase from the estimate quoted in our contract with them: 
 
-| Original inventory used for estimate with Backstage | Final inventory delivered to Backstage |
+| Original inventory used for contract estimate with Backstage | Final inventory delivered to Backstage |
 |-------------------|---------------|
-| 372 editions, 2978 pages total |  394 editions, 3,152 pages total |
+| 372 editions | 394 editions |
+| 2978 pages total | 3,152 pages total |
 | $5020.00 Estimated | $5196.32 Currently Estimated |
 
 **A $176.32 increase from the estimate in the contract.**
