@@ -1,3 +1,584 @@
-<!doctype html><html lang=en-us><head><meta charset=UTF-8><title>a j smith - cell: minimal geometric font</title>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=”robots” content="index, follow"><meta name=msvalidate.01 content><link href=/css/style.min.e690552a7cb646e3f7af6fa27f6f7dcabc7d8af78314e4dc817d7956ccd76d60.css rel=stylesheet integrity="sha256-5pBVKny2RuP3r2+if299yrx9iveDFOTcgX15VszXbWA="><link href=/css/print.css rel=stylesheet media=print><script src=https://code.jquery.com/jquery-3.6.0.slim.min.js crossorigin=anonymous integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="></script><script src=/js/stupidtable.min.js></script><script src=/js/smartquotes.js></script></head><body><header><svg xmlns="http://www.w3.org/2000/svg" class="svg-triangle"><polygon points="0,0 800,0 0,40"/></svg><nav id=menumain><ul><li><a href=https://ajsmith.co/ class=homelink>a j smith</a></li><li><a href=/articles/>Articles</a></li><li><a href=/portfolio/>Portfolio</a></li><li><a href=/contact/>Contact</a></li></ul></nav></header><main class=single><article><h1>cell: minimal geometric font</h1><div class=meta>Last Update:
-<time datetime="Sunday 25 Aug 2024" class=text-muted>Sunday 25 Aug 2024</time></div><div class=content><p>Cell is a minimal, geometric, sans-serif, monospace, all caps display font.</p><figure class=image><img src=/articles/cell/logo.svg width=500></figure><p>(The Cell logo above uses Cell glyphs and draws inspiration from the abstract art of Piet Mondrian.)</p><p>I sought to create a rectilinear geometric font for use with my <a href=https://ajsmith607.github.io/winecube/>Wine Cube</a> project. Beginning with the basic proportions from that project, I originally started with a font that uniformly used 4 strokes in a 4x4 grid, with a 1:4 ratio of stroke thickness to stroke length. I kept making this initial concept more abstract, adjusting for visual clarity, etc. But the ultimate goal was to severely constrain the size of each glyph, use minimal strokes, and leverage negative space to hopefully create a unique minimal font.</p><p>For the mock-ups below, the font follows a few basic rules:</p><ol><li>Each glyph is defined within a 4x4 grid, thus monospaced.</li><li>Each glyph is centered vertically and horizontally within a total 6x6 grid, resulting in 1 unit width border that naturally defaults to both tracking and leading two units in size.</li><li>There are only horizontal and vertical lines; curves are squared and diagonals are implied by empty space.</li><li>The thickness of inner strokes are half scale that of outer/edge strokes.</li><li>Parallel lines are preferred over perpendicular lines.</li></ol><figure class=image><img src=/articles/cell/grid-plan.svg width=500></figure><p>Aside from these rules, I used my judgement to make distinct and legible shapes. I purposely made certain groupings of letters similar transformations of each other. For example, B, E, M and W are represented by the same glyph rotated in the appropriate cardinal direction. The same is true of C, D, N and U. Several other glyphs are also closely related transformations: S and Z are the same basic glyph flipped horizontally. A variant of N is a 90 degree rotation of Z. And other, similar groupings exist.</p><p>Initially, I have only defined one set of letters, although I have created a number of variations that could be the basis for mixed cases.</p><p>The basic glyphs, currently only mocked up using SVG images:</p><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="5" y2="1"/><line x1="1" y1="1" x2="1" y2="5"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="2" y1="3" x2="4" y2="3" stroke-width="var(--minor-stroke-width)"/></svg><figcaption style=text-align:center;margin:0>A</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="5" y2="1"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="1" y1="5" x2="5" y2="5"/><line x1="1" y1="3" x2="3" y2="3" stroke-width="var(--minor-stroke-width)"/></svg><figcaption style=text-align:center;margin:0>B</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="5" y2="1"/><line x1="1" y1="1" x2="1" y2="5"/><line x1="1" y1="5" x2="5" y2="5"/></svg><figcaption style=text-align:center;margin:0>C</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="5" y2="1"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="5" y1="5" x2="1" y2="5"/></svg><figcaption style=text-align:center;margin:0>D</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="5" y2="1"/><line x1="1" y1="1" x2="1" y2="5"/><line x1="5" y1="5" x2="1" y2="5"/><line x1="3" y1="3" x2="5" y2="3" stroke-width="var(--minor-stroke-width)"/></svg><figcaption style=text-align:center;margin:0>E</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="5" y2="1"/><line x1="1" y1="1" x2="1" y2="5"/><line x1="3" y1="3" x2="5" y2="3" stroke-width="var(--minor-stroke-width)"/></svg><figcaption style=text-align:center;margin:0>F</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="5" y2="1"/><line x1="1" y1="1" x2="1" y2="5"/><line x1="1" y1="5" x2="5" y2="5"/><line x1="5" y1="5" x2="5" y2="3"/><line x1="3" y1="3" x2="4" y2="3" stroke-width="var(--minor-stroke-width)"/></svg><figcaption style=text-align:center;margin:0>G</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="1" y2="5"/><line x1="3" y1="2" x2="3" y2="4" stroke-width="var(--minor-stroke-width)"/><line x1="5" y1="1" x2="5" y2="5"/></svg><figcaption style=text-align:center;margin:0>H</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="5" y2="1"/><line x1="2" y1="3" x2="4" y2="3" stroke-width="var(--minor-stroke-width)"/><line x1="5" y1="5" x2="1" y2="5"/></svg><figcaption style=text-align:center;margin:0>I</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="5" y1="1" x2="5" y2="5"/><line x1="1" y1="5" x2="5" y2="5"/></svg><figcaption style=text-align:center;margin:0>J</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="1" y2="5"/><line x1="4" y1="1" x2="5" y2="1"/><line x1="2" y1="3" x2="4" y2="3" stroke-width="var(--minor-stroke-width)"/><line x1="4" y1="5" x2="5" y2="5"/></svg><figcaption style=text-align:center;margin:0>K</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="1" y2="5"/><line x1="1" y1="5" x2="5" y2="5"/></svg><figcaption style=text-align:center;margin:0>L</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="5" y2="1"/><line x1="1" y1="1" x2="1" y2="5"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="3" y1="3" x2="3" y2="5" stroke-width="var(--minor-stroke-width)"/></svg><figcaption style=text-align:center;margin:0>M</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="5" y2="1"/><line x1="1" y1="1" x2="1" y2="5"/><line x1="5" y1="1" x2="5" y2="5"/></svg><figcaption style=text-align:center;margin:0>N</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="5" y2="1"/><line x1="5" y1="5" x2="1" y2="5"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="1" y1="5" x2="1" y2="1"/></svg><figcaption style=text-align:center;margin:0>O</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="1" y2="5"/><line x1="1" y1="1" x2="5" y2="1"/><line x1="5" y1="1" x2="5" y2="3"/><line x1="2" y1="3" x2="4" y2="3" stroke-width="var(--minor-stroke-width)"/></svg><figcaption style=text-align:center;margin:0>P</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="5" y2="1"/><line x1="5" y1="5" x2="1" y2="5"/><line x1="5" y1="1" x2="5" y2="5"/><line x1="1" y1="5" x2="1" y2="1"/><line x1="3" y1="3" x2="3" y2="4" stroke-width="var(--minor-stroke-width)"/></svg><figcaption style=text-align:center;margin:0>Q</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="1" y2="5"/><line x1="1" y1="1" x2="5" y2="1"/><line x1="5" y1="1" x2="5" y2="3"/><line x1="2" y1="3" x2="4" y2="3" stroke-width="var(--minor-stroke-width)"/><line x1="4" y1="5" x2="5" y2="5"/></svg><figcaption style=text-align:center;margin:0>R</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="1" y2="2"/><line x1="1" y1="1" x2="5" y2="1"/><line x1="1" y1="5" x2="5" y2="5"/><line x1="5" y1="4" x2="5" y2="5"/><line x1="2" y1="3" x2="4" y2="3" stroke-width="var(--minor-stroke-width)"/></svg><figcaption style=text-align:center;margin:0>S</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="5" y2="1"/><line x1="3" y1="3" x2="3" y2="5" stroke-width="var(--minor-stroke-width)"/></svg><figcaption style=text-align:center;margin:0>T</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="5" y1="1" x2="5" y2="5"/><line x1="5" y1="5" x2="1" y2="5"/><line x1="1" y1="5" x2="1" y2="1"/></svg><figcaption style=text-align:center;margin:0>U</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="1" y2="3"/><line x1="5" y1="1" x2="5" y2="3"/><line x1="2" y1="5" x2="4" y2="5"/></svg><figcaption style=text-align:center;margin:0>V</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="5" y1="1" x2="5" y2="5"/><line x1="1" y1="5" x2="1" y2="1"/><line x1="1" y1="5" x2="5" y2="5"/><line x1="3" y1="1" x2="3" y2="3" stroke-width="var(--minor-stroke-width)"/></svg><figcaption style=text-align:center;margin:0>W</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="2" y2="1"/><line x1="4" y1="1" x2="5" y2="1"/><line x1="2" y1="3" x2="4" y2="3" stroke-width="var(--minor-stroke-width)"/><line x1="1" y1="5" x2="2" y2="5"/><line x1="4" y1="5" x2="5" y2="5"/></svg><figcaption style=text-align:center;margin:0>X</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="1" y1="1" x2="1" y2="3"/><line x1="5" y1="1" x2="5" y2="3"/><line x1="3" y1="3" x2="3" y2="5" stroke-width="var(--minor-stroke-width)"/></svg><figcaption style=text-align:center;margin:0>Y</figcaption></figure><figure class=image style=display:inline-block><svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"><style>@import '/articles/cell/glyphs/style.css'</style><line x1="5" y1="1" x2="5" y2="2"/><line x1="1" y1="1" x2="5" y2="1"/><line x1="1" y1="5" x2="5" y2="5"/><line x1="1" y1="4" x2="1" y2="5"/><line x1="2" y1="3" x2="4" y2="3" stroke-width="var(--minor-stroke-width)"/></svg><figcaption style=text-align:center;margin:0>Z</figcaption></figure><p>In the future, I may create a true UFO font and release the code under an open source licence.</p></div><nav class=tags><ul><li><a href=/tags/design>design</a></li><li><a href=/tags/fonts>fonts</a></li></ul></nav></article></main><aside><div><div><h3>LATEST POSTS</h3></div><div><ul><li><a href=/articles/quaddress-cont/>quaddresses: imprecision in practice</a></li><li><a href=/articles/woodhull-sentinel-digitization/>woodhull sentinel digitization and preservation project</a></li><li><a href=/articles/minimal-chess-pieces/>Pip: Minimal Two-Dimensional Chess Piece Set</a></li><li><a href=/articles/wine-cube/>Wine Cube: simple wine bottle storage model</a></li><li><a href=/articles/cell/>cell: minimal geometric font</a></li></ul></div></div></aside><footer><p clas=copyright>&copy; <span id=cwyear></span> <a href=https://ajsmith.co/>a j smith</a></p><script>document.getElementById("cwyear").innerHTML=(new Date).getFullYear()</script></footer></body></html>
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        
+        
+<meta charset="UTF-8">
+<title>a j smith - cell: minimal geometric font</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name=”robots” content="index, follow">
+<meta name="msvalidate.01" content="" />
+
+        
+
+
+
+
+        
+
+    
+    
+    <link href="/css/style.css" rel="stylesheet" integrity="" />
+    <link href="/css/print.css" rel="stylesheet" media="print" />
+
+
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" crossorigin="anonymous"
+                                                                       integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="></script>
+        <script src="/js/stupidtable.min.js"></script>
+        <script src="/js/smartquotes.js"></script>
+
+        
+	
+
+    </head>
+    <body id="">
+        <header>
+<svg xmlns="http://www.w3.org/2000/svg" class="svg-triangle">
+    <polygon points="0,0 800,0 0,40"/>
+</svg>
+
+
+
+<nav id="menumain">
+    <ul>
+        <li><a href="http://localhost:1313/" class="homelink">a j smith</a> 
+</li> 
+        
+        <li><a href="/articles/">Articles</a></li>
+        
+        <li><a href="/portfolio/">Portfolio</a></li>
+        
+        <li><a href="/contact/">Contact</a></li>
+        
+    </ul>
+</nav>
+
+
+</header>
+
+        
+    <main id=""  class="single"> 
+        
+        <article>
+            <h1>cell: minimal geometric font</h1>
+            <div class="meta">Last Update:
+                <time datetime="Sunday 25 Aug 2024" class="text-muted">
+                    Sunday 25 Aug 2024
+                </time>	
+            </div>
+            <div class="content">
+                <p>Cell is a minimal, geometric, sans-serif, monospace, all caps display font.</p>
+<figure class="image"><img src="/articles/cell/logo.svg" width="500">
+</figure>
+
+<p>(The Cell logo above uses Cell glyphs and draws inspiration from the abstract art of Piet Mondrian.)</p>
+<p>I sought to create a rectilinear geometric font for use with my <a href="https://ajsmith607.github.io/winecube/">Wine Cube</a> project. Beginning with the basic proportions from that project, I originally started with a font that uniformly used 4 strokes in a 4x4 grid, with a 1:4 ratio of stroke thickness to stroke length. I kept making this initial concept more abstract, adjusting for visual clarity, etc. But the ultimate goal was to severely constrain the size of each glyph, use minimal strokes, and leverage negative space to hopefully create a unique minimal font.</p>
+<p>For the mock-ups below, the font follows a few basic rules:</p>
+<ol>
+<li>Each glyph is defined within a 4x4 grid, thus monospaced.</li>
+<li>Each glyph is centered vertically and horizontally within a total 6x6 grid, resulting in 1 unit width border that naturally defaults to both tracking and leading two units in size.</li>
+<li>There are only horizontal and vertical lines; curves are squared and diagonals are implied by empty space.</li>
+<li>The thickness of inner strokes are half scale that of outer/edge strokes.</li>
+<li>Parallel lines are preferred over perpendicular lines.</li>
+</ol>
+<figure class="image"><img src="/articles/cell/grid-plan.svg" width="500">
+</figure>
+
+<p>Aside from these rules, I used my judgement to make distinct and legible shapes. I purposely made certain groupings of letters similar transformations of each other. For example, B, E, M and W are represented by the same glyph rotated in the appropriate cardinal direction. The same is true of C, D, N and U. Several other glyphs are also closely related transformations: S and Z are the same basic glyph flipped horizontally. A variant of N is a 90 degree rotation of Z. And other, similar groupings exist.</p>
+<p>Initially, I have only defined one set of letters, although I have created a number of variations that could be the basis for mixed cases.</p>
+<p>The basic glyphs, currently only mocked up using SVG images:</p>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="1" y1="1" x2="1" y2="5" />
+  <line x1="5" y1="1" x2="5" y2="5" />
+  <line x1="2" y1="3" x2="4" y2="3" 
+        stroke-width="var(--minor-stroke-width)" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">A</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="5" y1="1" x2="5" y2="5" />
+  <line x1="1" y1="5" x2="5" y2="5" />
+  <line x1="1" y1="3" x2="3" y2="3" 
+        stroke-width="var(--minor-stroke-width)" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">B</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="1" y1="1" x2="1" y2="5" />
+  <line x1="1" y1="5" x2="5" y2="5" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">C</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="5" y1="1" x2="5" y2="5" />
+  <line x1="5" y1="5" x2="1" y2="5" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">D</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="1" y1="1" x2="1" y2="5" />
+  <line x1="5" y1="5" x2="1" y2="5" />
+  <line x1="3" y1="3" x2="5" y2="3" 
+        stroke-width="var(--minor-stroke-width)" />
+</svg>
+
+
+
+
+
+<figcaption style="text-align: center; margin: 0">E</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="1" y1="1" x2="1" y2="5" />
+  <line x1="3" y1="3" x2="5" y2="3" 
+        stroke-width="var(--minor-stroke-width)" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">F</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="1" y1="1" x2="1" y2="5" />
+  <line x1="1" y1="5" x2="5" y2="5" />
+  <line x1="5" y1="5" x2="5" y2="3" />
+  <line x1="3" y1="3" x2="4" y2="3" 
+        stroke-width="var(--minor-stroke-width)" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">G</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="1" y2="5" />
+  <line x1="3" y1="2" x2="3" y2="4"
+        stroke-width="var(--minor-stroke-width)" />
+  <line x1="5" y1="1" x2="5" y2="5" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">H</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="2" y1="3" x2="4" y2="3"
+        stroke-width="var(--minor-stroke-width)" />
+  <line x1="5" y1="5" x2="1" y2="5" />
+</svg>
+
+
+
+
+<figcaption style="text-align: center; margin: 0">I</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="5" y1="1" x2="5" y2="5" />
+  <line x1="1" y1="5" x2="5" y2="5" />
+<!--  <line x1="1" y1="4" x2="1" y2="5" /> -->
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">J</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="1" y2="5" />
+
+  <line x1="4" y1="1" x2="5" y2="1" />
+
+  <line x1="2" y1="3" x2="4" y2="3" 
+        stroke-width="var(--minor-stroke-width)" />
+            
+  <line x1="4" y1="5" x2="5" y2="5" />
+
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">K</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="1" y2="5" />
+  <line x1="1" y1="5" x2="5" y2="5" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">L</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="1" y1="1" x2="1" y2="5" />
+  <line x1="5" y1="1" x2="5" y2="5" />
+  <line x1="3" y1="3" x2="3" y2="5" 
+        stroke-width="var(--minor-stroke-width)" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">M</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="1" y1="1" x2="1" y2="5" />
+  <line x1="5" y1="1" x2="5" y2="5" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">N</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="5" y1="5" x2="1" y2="5" />
+  <line x1="5" y1="1" x2="5" y2="5" />
+  <line x1="1" y1="5" x2="1" y2="1" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">O</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="1" y2="5" />
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="5" y1="1" x2="5" y2="3" />
+  <line x1="2" y1="3" x2="4" y2="3" 
+        stroke-width="var(--minor-stroke-width)" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">P</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="5" y1="5" x2="1" y2="5" />
+  <line x1="5" y1="1" x2="5" y2="5" />
+  <line x1="1" y1="5" x2="1" y2="1" />
+  <line x1="3" y1="3" x2="3" y2="4"
+        stroke-width="var(--minor-stroke-width)" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">Q</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="1" y2="5" />
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="5" y1="1" x2="5" y2="3" />
+  <line x1="2" y1="3" x2="4" y2="3" 
+        stroke-width="var(--minor-stroke-width)" />
+  
+  <line x1="4" y1="5" x2="5" y2="5" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">R</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="1" y2="2" />
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="1" y1="5" x2="5" y2="5" />
+  <line x1="5" y1="4" x2="5" y2="5" />
+  <line x1="2" y1="3" x2="4" y2="3" 
+        stroke-width="var(--minor-stroke-width)" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">S</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="3" y1="3" x2="3" y2="5" 
+        stroke-width="var(--minor-stroke-width)" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">T</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="5" y1="1" x2="5" y2="5" />
+  <line x1="5" y1="5" x2="1" y2="5" />
+  <line x1="1" y1="5" x2="1" y2="1" />
+</svg>
+
+
+
+
+<figcaption style="text-align: center; margin: 0">U</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="1" y2="3" />
+  <line x1="5" y1="1" x2="5" y2="3" />
+  <line x1="2" y1="5" x2="4" y2="5" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">V</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="5" y1="1" x2="5" y2="5" />
+  <line x1="1" y1="5" x2="1" y2="1" />
+  <line x1="1" y1="5" x2="5" y2="5" />
+  <line x1="3" y1="1" x2="3" y2="3"
+        stroke-width="var(--minor-stroke-width)" />
+</svg>
+
+
+
+
+
+
+
+
+<figcaption style="text-align: center; margin: 0">W</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="2" y2="1" />
+
+  <line x1="4" y1="1" x2="5" y2="1" />
+
+  <line x1="2" y1="3" x2="4" y2="3" 
+        stroke-width="var(--minor-stroke-width)" />
+
+  <line x1="1" y1="5" x2="2" y2="5" />
+
+  <line x1="4" y1="5" x2="5" y2="5" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">X</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="1" y1="1" x2="1" y2="3" />
+  <line x1="5" y1="1" x2="5" y2="3" />
+  <line x1="3" y1="3" x2="3" y2="5" 
+        stroke-width="var(--minor-stroke-width)" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">Y</figcaption>
+</figure>
+<figure class="image" style="display: inline-block"> 
+
+    <svg class="cell-alpha" width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('/articles/cell/glyphs/style.css');
+  </style>
+  <line x1="5" y1="1" x2="5" y2="2" />
+  <line x1="1" y1="1" x2="5" y2="1" />
+  <line x1="1" y1="5" x2="5" y2="5" />
+  <line x1="1" y1="4" x2="1" y2="5" />
+  <line x1="2" y1="3" x2="4" y2="3" 
+        stroke-width="var(--minor-stroke-width)" />
+</svg>
+
+
+
+<figcaption style="text-align: center; margin: 0">Z</figcaption>
+</figure>
+<p>In the future, I may create a true UFO font and release the code under an open source licence.</p>
+            </div>
+            
+<nav class="tags">
+    <ul>
+        
+        <li><a href="/tags/design">design</a></li>
+        
+        <li><a href="/tags/fonts">fonts</a></li>
+        
+    </ul>
+</nav>
+
+
+            </article>
+        </main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/articles/quaddress-cont/">quaddresses: imprecision in practice</a></li>
+				
+				<li><a href="/articles/woodhull-sentinel-digitization/">woodhull sentinel digitization and preservation project</a></li>
+				
+				<li><a href="/articles/minimal-chess-pieces/">Pip: Minimal Two-Dimensional Chess Piece Set</a></li>
+				
+				<li><a href="/articles/wine-cube/">Wine Cube: simple wine bottle storage model</a></li>
+				
+				<li><a href="/articles/cell/">cell: minimal geometric font</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+        <footer>
+    <p clas="copyright">&copy; <span id="cwyear"></span> <a href="http://localhost:1313/">a j smith</a></p>
+    <script> document.getElementById("cwyear").innerHTML = (new Date().getFullYear());</script>
+</footer>
+
+        
+    </body>
+</html> 

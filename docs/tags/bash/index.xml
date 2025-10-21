@@ -1,8 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>bash on a j smith</title><link>https://ajsmith.co/tags/bash/</link><description>Recent content in bash on a j smith</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 23 Oct 2024 08:45:17 -0400</lastBuildDate><atom:link href="https://ajsmith.co/tags/bash/index.xml" rel="self" type="application/rss+xml"/><item><title>Streamlining Static Web Development</title><link>https://ajsmith.co/articles/static-development-streamlining/</link><pubDate>Wed, 24 Jul 2024 00:00:00 +0000</pubDate><guid>https://ajsmith.co/articles/static-development-streamlining/</guid><description>&lt;p>There are times when even using Hugo for static web development is overkill. This articles shows how to efficiently develop small static web pages with some of the same advantages as the Hugo environment:&lt;/p>
-&lt;ul>
-&lt;li>Easily invoke a zero-configured static web server.&lt;/li>
-&lt;li>Optimize development efficiency with LiveReload.&lt;/li>
-&lt;li>Automate the environment.&lt;/li>
-&lt;li>Optimize for production.&lt;/li>
-&lt;/ul>
-&lt;p>The solutions described will use &lt;a href="https://nodejs.org/en/">Node.js&lt;/a> and Bash scripts.&lt;/p></description></item><item><title>my process for creating new Hugo sites</title><link>https://ajsmith.co/articles/hugo-github-pages-workflow/</link><pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate><guid>https://ajsmith.co/articles/hugo-github-pages-workflow/</guid><description>My current documentation, in bash code, for creating a new Hugo site hosted on Github pages.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bash on a j smith</title>
+    <link>http://localhost:1313/tags/bash/</link>
+    <description>Recent content in Bash on a j smith</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Oct 2024 08:45:17 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Streamlining Static Web Development</title>
+      <link>http://localhost:1313/articles/static-development-streamlining/</link>
+      <pubDate>Wed, 24 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/static-development-streamlining/</guid>
+      <description>&lt;p&gt;There are times when even using Hugo for static web development is overkill. This articles shows how to efficiently develop small static web pages with some of the same advantages as the Hugo environment:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Easily invoke a zero-configured static web server.&lt;/li&gt;&#xA;&lt;li&gt;Optimize development efficiency with LiveReload.&lt;/li&gt;&#xA;&lt;li&gt;Automate the environment.&lt;/li&gt;&#xA;&lt;li&gt;Optimize for production.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The solutions described will use &lt;a href=&#34;https://nodejs.org/en/&#34;&gt;Node.js&lt;/a&gt; and Bash scripts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>my process for creating new Hugo sites</title>
+      <link>http://localhost:1313/articles/hugo-github-pages-workflow/</link>
+      <pubDate>Sun, 01 May 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/articles/hugo-github-pages-workflow/</guid>
+      <description>My current documentation, in bash code, for creating a new Hugo site hosted on Github pages.</description>
+    </item>
+  </channel>
+</rss>

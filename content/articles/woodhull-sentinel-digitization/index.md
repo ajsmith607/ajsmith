@@ -106,4 +106,9 @@ Adam will do quality control checks on the digital files and package them for di
 
 If Adam or Leslie discover any issues, they will promptly report them, otherwise, once Adam has finished post-processing and packaging the digital files, he will proceed with distributing the files to the targets identified in the project proposal and report back to the Woodhull Town Board. In particular, Adam will verify that the files are imported properly and displaying properly on the NYS Historic Newspapers site, and report back.
 
+## October 13, 2025 Update
+
+Backstage Library Works reports that the material preparation and rehousing phase has begun in preparation for digitization. 
+
+So far, no issues to report.
 

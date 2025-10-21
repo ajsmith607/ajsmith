@@ -1,14 +1,892 @@
-<!doctype html><html lang=en-us><head><meta charset=UTF-8><title>a j smith - spatially mapping derivative content to original documents</title>
-<meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=”robots” content="index, follow"><meta name=msvalidate.01 content><link href=/css/style.min.e690552a7cb646e3f7af6fa27f6f7dcabc7d8af78314e4dc817d7956ccd76d60.css rel=stylesheet integrity="sha256-5pBVKny2RuP3r2+if299yrx9iveDFOTcgX15VszXbWA="><link href=/css/print.css rel=stylesheet media=print><script src=https://code.jquery.com/jquery-3.6.0.slim.min.js crossorigin=anonymous integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="></script><script src=/js/stupidtable.min.js></script><script src=/js/smartquotes.js></script></head><body><header><svg xmlns="http://www.w3.org/2000/svg" class="svg-triangle"><polygon points="0,0 800,0 0,40"/></svg><nav id=menumain><ul><li><a href=https://ajsmith.co/ class=homelink>a j smith</a></li><li><a href=/articles/>Articles</a></li><li><a href=/portfolio/>Portfolio</a></li><li><a href=/contact/>Contact</a></li></ul></nav></header><main class=single><article><h1>spatially mapping derivative content to original documents</h1><div class=meta>Last Update:
-<time datetime="Friday 23 Aug 2024" class=text-muted>Friday 23 Aug 2024</time></div><div class=content><p>Quadrant Addressing or <em>Quaddressing</em> provides an intuitive and consistent way to make relative spatial references to an original, two dimensional artifact (primarily for documents such as a printed text, photographs, etc.) regardless of its size or shape, or whether the artifact is physical or digital. Quaddressing relies on imprecision to aid human judgement instead of relying on highly precise measurements of varying units across different types of documents, thereby greatly increasing the ease and efficiency of both recording and interpretation across all documents for both human actors and code.</p><p>Often while doing historical research and publishing my findings, I capture and display a smaller piece of information from an authoritative source. Actual examples include:</p><ul><li>quoting a single sentence in a newspaper article, when the newspaper is in a larger format with many other articles on the same page,</li><li>taking not only full photographs of handwritten documents, but also photographing each page in sections for greater detail, and</li><li>cropping a photo to &ldquo;zoom in&rdquo; on one aspect of it, such as showing a single person&rsquo;s face among an otherwise unordered group of people in a photo, or showing several city blocks from a much larger map that might itself not have a visible coordinate system or other spatial reference points.</li></ul><p>In each of these cases, much of the context of the original and the relationship of the part to the whole is missing, at least to some degree. It is one of my fundamental goals to assist people in discovering, accessing, and understanding the original documents, whether physical or digital. To that end, I have been experimenting with an approach that would allow me to simply and easily add metadata to individual images that would provide an intuitive way to guide people back to their positions in the original documents.</p><p>My approach is to use a simple addressing system that can be applied uniformly to any kind of document, regardless of the size or shape of that document, or whether it is print or digital. The approach scales depending on individual needs and can be easily and efficiently encoded and decoded, by both humans and code. I call this addressing system quaddressing.</p><p>Beginning with populating the negative use case: if a derivative represents the entire area of the original, its quaddress is &ldquo;0&rdquo;. To specify an area within the document, simply divide the current division into quadrants, beginning with the entire area:</p><figure class=image><svg width="492.32822" height="487.83707" viewBox="0 0 243.41016 241.18971" id="svg30" sodipodi:docname="1d-grid.svg" inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs34"/><sodipodi:namedview id="namedview32" pagecolor="#505050" bordercolor="#eeeeee" borderopacity="1" inkscape:pageshadow="0" inkscape:pageopacity="0" inkscape:pagecheckerboard="0" showgrid="false" inkscape:zoom=".86125573" inkscape:cx="502.17373" inkscape:cy="425.54144" inkscape:window-width="1920" inkscape:window-height="1080" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-maximized="1" inkscape:current-layer="svg30" units="px" fit-margin-top="0" fit-margin-left="0" fit-margin-right="0" fit-margin-bottom="0" width="500" viewbox-width="500" viewbox-height="500"/><g fill="none" stroke="#ebaf36" stroke-width="11.314" id="g10" transform="matrix(0.24068703,0,0,0.23849142,1.3615673,1.349146)"><rect x="-.31320001e-5" width="1e3" height="500" id="rect2" y="0"/><rect transform="rotate(-90)" x="-1e3" y="500" width="1e3" height="500" id="rect4"/><rect transform="rotate(-90)" x="-1e3" width="1e3" height="500" id="rect6" y="0"/><rect y="500" width="1e3" height="500" id="rect8" x="0"/></g><g fill="#000" font-family="sans-serif" font-size="192" id="g28" transform="matrix(0.24068703,0,0,0.23849142,1.3615673,1.349146)"><text x="185.97028" y="319.09995" style="line-height:1.25" id="text14"><tspan x="185.97028" y="319.09995" fill="#ebaf36" font-size="192" id="tspan12">1</tspan></text><text x="686.86072" y="319.09995" style="line-height:1.25" id="text18"><tspan x="686.86072" y="319.09995" fill="#ebaf36" font-size="192" id="tspan16">2</tspan></text><text x="185.97028" y="819.68884" style="line-height:1.25" id="text22"><tspan x="185.97028" y="819.68884" fill="#ebaf36" font-size="192" id="tspan20">3</tspan></text><text x="686.86072" y="819.68884" style="line-height:1.25" id="text26"><tspan x="686.86072" y="819.68884" fill="#ebaf36" font-size="192" id="tspan24">4</tspan></text></g></svg><figcaption></figcaption></figure><p>As greater precision is needed, divide each quadrant in the current/highest division into additional quadrants, thus creating a new current/highest division:</p><figure class=image><svg width="499.15" height="499.15" viewBox="0 0 499.15 499.15" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)" fill="none" stroke="#ebaf36"><rect x="-15259e-9" width="250" height="250"/><g stroke-width="11.314"><rect x="-3132e-9" width="1e3" height="500"/><rect transform="rotate(-90)" x="-1e3" y="500" width="1e3" height="500"/><rect transform="rotate(-90)" x="-1e3" width="1e3" height="500"/><rect y="500" width="1e3" height="500"/></g><rect x="250" y="-3132e-9" width="250" height="250"/><rect x="-1e-5" y="250" width="250" height="250"/><rect x="250" y="250" width="250" height="250"/><rect x="500" y="-3132e-9" width="250" height="250"/><rect x="750" y="-3132e-9" width="250" height="250"/><rect x="500" y="250" width="250" height="250"/><rect x="750" y="250" width="250" height="250"/><rect x=".13654e-5" y="500" width="250" height="250"/><rect x="250" y="500" width="250" height="250"/><rect x="16624e-9" y="750" width="250" height="250"/><rect x="250" y="750" width="250" height="250"/><rect x="500" y="500" width="250" height="250"/><rect x="750" y="500" width="250" height="250"/><rect x="500" y="750" width="250" height="250"/><rect x="750" y="750" width="250" height="250"/></g><g font-family="sans-serif"><g font-size="96"><g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)"><text x="93.617172" y="159.99219" style="line-height:1.25"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96">4</tspan></text></g><g transform="matrix(.49356 0 0 .49356 247.11 2.7921)"><text x="93.617172" y="159.99219" style="line-height:1.25"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96">4</tspan></text></g><g transform="matrix(.49356 0 0 .49356 3.2856 249.08)"><text x="93.617172" y="159.99219" style="line-height:1.25"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96">4</tspan></text></g><g transform="matrix(.49356 0 0 .49356 247.6 249.08)"><text x="93.617172" y="159.99219" style="line-height:1.25"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96">4</tspan></text></g></g><g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)" font-size="192"><text x="185.97028" y="319.09995" style="line-height:1.25"><tspan x="185.97028" y="319.09995" fill="#ebaf36" font-size="192">1</tspan></text><text x="686.86072" y="319.09995" style="line-height:1.25"><tspan x="686.86072" y="319.09995" fill="#ebaf36" font-size="192">2</tspan></text><text x="185.97028" y="819.68884" style="line-height:1.25"><tspan x="185.97028" y="819.68884" fill="#ebaf36" font-size="192">3</tspan></text><text x="686.86072" y="819.68884" style="line-height:1.25"><tspan x="686.86072" y="819.68884" fill="#ebaf36" font-size="192">4</tspan></text></g></g></svg><figcaption></figcaption></figure><p>The original quadrants are shown by the major grid, the added division by the minor grid.</p><p>This approach provides a clear and consistent method for achieving greater precision by adding an arbitrary number of divisions that can then be referenced in the metadata with an arbitrarily long string of integers:</p><pre><code>
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        
+        
+<meta charset="UTF-8">
+<title>a j smith - spatially mapping derivative content to original documents</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name=”robots” content="index, follow">
+<meta name="msvalidate.01" content="" />
+
+        
+
+
+
+
+        
+
+    
+    
+    <link href="/css/style.css" rel="stylesheet" integrity="" />
+    <link href="/css/print.css" rel="stylesheet" media="print" />
+
+
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" crossorigin="anonymous"
+                                                                       integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="></script>
+        <script src="/js/stupidtable.min.js"></script>
+        <script src="/js/smartquotes.js"></script>
+
+        
+	
+
+    </head>
+    <body id="">
+        <header>
+<svg xmlns="http://www.w3.org/2000/svg" class="svg-triangle">
+    <polygon points="0,0 800,0 0,40"/>
+</svg>
+
+
+
+<nav id="menumain">
+    <ul>
+        <li><a href="http://localhost:1313/" class="homelink">a j smith</a> 
+</li> 
+        
+        <li><a href="/articles/">Articles</a></li>
+        
+        <li><a href="/portfolio/">Portfolio</a></li>
+        
+        <li><a href="/contact/">Contact</a></li>
+        
+    </ul>
+</nav>
+
+
+</header>
+
+        
+    <main id=""  class="single"> 
+        
+        <article>
+            <h1>spatially mapping derivative content to original documents</h1>
+            <div class="meta">Last Update:
+                <time datetime="Friday 23 Aug 2024" class="text-muted">
+                    Friday 23 Aug 2024
+                </time>	
+            </div>
+            <div class="content">
+                <p>Quadrant Addressing or <em>Quaddressing</em> provides an intuitive and consistent way to make relative spatial references to an original, two dimensional artifact (primarily for documents such as a printed text, photographs, etc.) regardless of its size or shape, or whether the artifact is physical or digital. Quaddressing relies on imprecision to aid human judgement instead of relying on highly precise measurements of varying units across different types of documents, thereby greatly increasing the ease and efficiency of both recording and interpretation across all documents for both human actors and code.</p>
+<p>Often while doing historical research and publishing my findings, I capture and display a smaller piece of information from an authoritative source. Actual examples include:</p>
+<ul>
+<li>quoting a single sentence in a newspaper article, when the newspaper is in a larger format with many other articles on the same page,</li>
+<li>taking not only full photographs of handwritten documents, but also photographing each page in sections for greater detail, and</li>
+<li>cropping a photo to &ldquo;zoom in&rdquo; on one aspect of it, such as showing a single person&rsquo;s face among an otherwise unordered group of people in a photo, or showing several city blocks from a much larger map that might itself not have a visible coordinate system or other spatial reference points.</li>
+</ul>
+<p>In each of these cases, much of the context of the original and the relationship of the part to the whole is missing, at least to some degree. It is one of my fundamental goals to assist people in discovering, accessing, and understanding the original documents, whether physical or digital. To that end, I have been experimenting with an approach that would allow me to simply and easily add metadata to individual images that would provide an intuitive way to guide people back to their positions in the original documents.</p>
+<p>My approach is to use a simple addressing system that can be applied uniformly to any kind of document, regardless of the size or shape of that document, or whether it is print or digital. The approach scales depending on individual needs and can be easily and efficiently encoded and decoded, by both humans and code. I call this addressing system quaddressing.</p>
+<p>Beginning with populating the negative use case: if a derivative represents the entire area of the original, its quaddress is &ldquo;0&rdquo;. To specify an area within the document, simply divide the current division into quadrants, beginning with the entire area:</p>
+<figure class="image"> 
+
+    
+<svg
+   width="492.32822"
+   height="487.83707"
+   version="1.1"
+   viewBox="0 0 243.41016 241.18971"
+   id="svg30"
+   sodipodi:docname="1d-grid.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs34" />
+  <sodipodi:namedview
+     id="namedview32"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.86125573"
+     inkscape:cx="502.17373"
+     inkscape:cy="425.54144"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg30"
+     units="px"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     width="500px"
+     viewbox-width="500"
+     viewbox-height="500" />
+  <g
+     fill="none"
+     stroke="#ebaf36"
+     stroke-width="11.314"
+     id="g10"
+     transform="matrix(0.24068703,0,0,0.23849142,1.3615673,1.349146)">
+    <rect
+       x="-3.1320001e-06"
+       width="1000"
+       height="500"
+       id="rect2"
+       y="0" />
+    <rect
+       transform="rotate(-90)"
+       x="-1000"
+       y="500"
+       width="1000"
+       height="500"
+       id="rect4" />
+    <rect
+       transform="rotate(-90)"
+       x="-1000"
+       width="1000"
+       height="500"
+       id="rect6"
+       y="0" />
+    <rect
+       y="500"
+       width="1000"
+       height="500"
+       id="rect8"
+       x="0" />
+  </g>
+  <g
+     fill="#000000"
+     font-family="sans-serif"
+     font-size="192px"
+     id="g28"
+     transform="matrix(0.24068703,0,0,0.23849142,1.3615673,1.349146)">
+    <text
+       x="185.97028"
+       y="319.09995"
+       style="line-height:1.25"
+       xml:space="preserve"
+       id="text14"><tspan
+         x="185.97028"
+         y="319.09995"
+         fill="#ebaf36"
+         font-size="192px"
+         id="tspan12">1</tspan></text>
+    <text
+       x="686.86072"
+       y="319.09995"
+       style="line-height:1.25"
+       xml:space="preserve"
+       id="text18"><tspan
+         x="686.86072"
+         y="319.09995"
+         fill="#ebaf36"
+         font-size="192px"
+         id="tspan16">2</tspan></text>
+    <text
+       x="185.97028"
+       y="819.68884"
+       style="line-height:1.25"
+       xml:space="preserve"
+       id="text22"><tspan
+         x="185.97028"
+         y="819.68884"
+         fill="#ebaf36"
+         font-size="192px"
+         id="tspan20">3</tspan></text>
+    <text
+       x="686.86072"
+       y="819.68884"
+       style="line-height:1.25"
+       xml:space="preserve"
+       id="text26"><tspan
+         x="686.86072"
+         y="819.68884"
+         fill="#ebaf36"
+         font-size="192px"
+         id="tspan24">4</tspan></text>
+  </g>
+</svg>
+
+
+
+<figcaption></figcaption>
+</figure> 
+<p>As greater precision is needed, divide each quadrant in the current/highest division into additional quadrants, thus creating a new current/highest division:</p>
+<figure class="image"> 
+
+    <svg width="499.15" height="499.15" version="1.1" viewBox="0 0 499.15 499.15" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)" fill="none" stroke="#ebaf36">
+  <rect x="-1.5259e-5" width="250" height="250"/>
+  <g stroke-width="11.314">
+   <rect x="-3.132e-6" width="1e3" height="500"/>
+   <rect transform="rotate(-90)" x="-1e3" y="500" width="1e3" height="500"/>
+   <rect transform="rotate(-90)" x="-1e3" width="1e3" height="500"/>
+   <rect y="500" width="1e3" height="500"/>
+  </g>
+  <rect x="250" y="-3.132e-6" width="250" height="250"/>
+  <rect x="-1e-5" y="250" width="250" height="250"/>
+  <rect x="250" y="250" width="250" height="250"/>
+  <rect x="500" y="-3.132e-6" width="250" height="250"/>
+  <rect x="750" y="-3.132e-6" width="250" height="250"/>
+  <rect x="500" y="250" width="250" height="250"/>
+  <rect x="750" y="250" width="250" height="250"/>
+  <rect x="1.3654e-6" y="500" width="250" height="250"/>
+  <rect x="250" y="500" width="250" height="250"/>
+  <rect x="1.6624e-5" y="750" width="250" height="250"/>
+  <rect x="250" y="750" width="250" height="250"/>
+  <rect x="500" y="500" width="250" height="250"/>
+  <rect x="750" y="500" width="250" height="250"/>
+  <rect x="500" y="750" width="250" height="250"/>
+  <rect x="750" y="750" width="250" height="250"/>
+ </g>
+ <g font-family="sans-serif">
+  <g font-size="96px">
+   <g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)">
+    <text x="93.617172" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96px">1</tspan></text>
+    <text x="343.61719" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96px">2</tspan></text>
+    <text x="93.61718" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96px">3</tspan></text>
+    <text x="343.61719" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96px">4</tspan></text>
+   </g>
+   <g transform="matrix(.49356 0 0 .49356 247.11 2.7921)">
+    <text x="93.617172" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96px">1</tspan></text>
+    <text x="343.61719" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96px">2</tspan></text>
+    <text x="93.61718" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96px">3</tspan></text>
+    <text x="343.61719" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96px">4</tspan></text>
+   </g>
+   <g transform="matrix(.49356 0 0 .49356 3.2856 249.08)">
+    <text x="93.617172" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96px">1</tspan></text>
+    <text x="343.61719" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96px">2</tspan></text>
+    <text x="93.61718" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96px">3</tspan></text>
+    <text x="343.61719" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96px">4</tspan></text>
+   </g>
+   <g transform="matrix(.49356 0 0 .49356 247.6 249.08)">
+    <text x="93.617172" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96px">1</tspan></text>
+    <text x="343.61719" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96px">2</tspan></text>
+    <text x="93.61718" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96px">3</tspan></text>
+    <text x="343.61719" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96px">4</tspan></text>
+   </g>
+  </g>
+  <g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)" font-size="192px">
+   <text x="185.97028" y="319.09995" style="line-height:1.25" xml:space="preserve"><tspan x="185.97028" y="319.09995" fill="#ebaf36" font-size="192px">1</tspan></text>
+   <text x="686.86072" y="319.09995" style="line-height:1.25" xml:space="preserve"><tspan x="686.86072" y="319.09995" fill="#ebaf36" font-size="192px">2</tspan></text>
+   <text x="185.97028" y="819.68884" style="line-height:1.25" xml:space="preserve"><tspan x="185.97028" y="819.68884" fill="#ebaf36" font-size="192px">3</tspan></text>
+   <text x="686.86072" y="819.68884" style="line-height:1.25" xml:space="preserve"><tspan x="686.86072" y="819.68884" fill="#ebaf36" font-size="192px">4</tspan></text>
+  </g>
+ </g>
+</svg>
+
+
+
+<figcaption></figcaption>
+</figure> 
+<p>The original quadrants are shown by the major grid, the added division by the minor grid.</p>
+<p>This approach provides a clear and consistent method for achieving greater precision by adding an arbitrary number of divisions that can then be referenced in the metadata with an arbitrarily long string of integers:</p>
+<pre><code>
 image.quaddress = "43";
-</code></pre><figure class=image><svg width="499.15" height="499.15" viewBox="0 0 499.15 499.15" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#ebaf36"><rect x="2.7921" y="2.7921" width="123.39" height="123.39" stroke-width=".49356"/><g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)" stroke-width="11.314"><rect x="-3132e-9" width="1e3" height="500"/><rect transform="rotate(-90)" x="-1e3" y="500" width="1e3" height="500"/><rect transform="rotate(-90)" x="-1e3" width="1e3" height="500"/><rect y="500" width="1e3" height="500"/></g><g stroke-width=".49356"><rect x="126.18" y="2.7921" width="123.39" height="123.39"/><rect x="2.7921" y="126.18" width="123.39" height="123.39"/><rect x="126.18" y="126.18" width="123.39" height="123.39"/><rect x="249.57" y="2.7921" width="123.39" height="123.39"/><rect x="372.96" y="2.7921" width="123.39" height="123.39"/><rect x="249.57" y="126.18" width="123.39" height="123.39"/><rect x="372.96" y="126.18" width="123.39" height="123.39"/><rect x="2.7921" y="249.57" width="123.39" height="123.39"/><rect x="126.18" y="249.57" width="123.39" height="123.39"/><rect x="2.7921" y="372.96" width="123.39" height="123.39"/><rect x="126.18" y="372.96" width="123.39" height="123.39"/><rect x="249.57" y="249.57" width="123.39" height="123.39"/><rect x="372.96" y="249.57" width="123.39" height="123.39"/></g></g><rect x="249.57" y="372.96" width="123.39" height="123.39" fill="#ebaf36" fill-opacity=".40849" stroke="#ebaf36" stroke-width=".49356"/><rect x="372.96" y="372.96" width="123.39" height="123.39" fill="none" stroke="#ebaf36" stroke-width=".49356"/><g font-family="sans-serif"><g font-size="96"><g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)"><text x="93.617172" y="159.99219" style="line-height:1.25"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96">4</tspan></text></g><g transform="matrix(.49356 0 0 .49356 247.11 2.7921)"><text x="93.617172" y="159.99219" style="line-height:1.25"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96">4</tspan></text></g><g transform="matrix(.49356 0 0 .49356 3.2856 249.08)"><text x="93.617172" y="159.99219" style="line-height:1.25"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96">4</tspan></text></g><g transform="matrix(.49356 0 0 .49356 247.6 249.08)"><text x="93.617172" y="159.99219" style="line-height:1.25"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96">4</tspan></text></g></g><g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)" font-size="192"><text x="185.97028" y="319.09995" style="line-height:1.25"><tspan x="185.97028" y="319.09995" fill="#ebaf36" font-size="192">1</tspan></text><text x="686.86072" y="319.09995" style="line-height:1.25"><tspan x="686.86072" y="319.09995" fill="#ebaf36" font-size="192">2</tspan></text><text x="185.97028" y="819.68884" style="line-height:1.25"><tspan x="185.97028" y="819.68884" fill="#ebaf36" font-size="192">3</tspan></text><text x="686.86072" y="819.68884" style="line-height:1.25"><tspan x="686.86072" y="819.68884" fill="#ebaf36" font-size="192">4</tspan></text></g></g></svg><figcaption></figcaption></figure><p>Essentially, quaddresses are a textual description of visual data. Quaddresses in citations may be abbreviated as in the following real-world example:</p><figure><blockquote><p>— 11 Nov 1937, &ldquo;In Tribute to Emily Mills&rdquo;, The Ithaca Journal, Ithaca NY, p2, q212, newspapers.com.</p></blockquote></figure><p>Quaddressessing is a simple, intuitive, universally applicable tool of focus. The value to the human quaddress consumer is that it greatly constrains the scan area of the original document when locating the citation in context, at which point, human judgement can quickly and easily locate the original precisely. As with my approach to <a href=http://thisismitime.com>mitime</a>, I intentionally sacrifice precision for simplicity to increase both encoding and decoding efficiency.</p><p>High precision is often not needed, and for human actors, makes both the metadata encoding and location resolution counter-productively complex. This approach is more efficient because it simply seeks to enhance human judgement rather than get in its way. Quaddresses are a tool of focus, not measurement. Encoding is estimated, decoding is approximated.</p><p>Quaddressing is simple and leverages the natural human ability to accurately estimate halves (and thus quarters), even of asymmetrical shapes. Many documents and artifacts are themselves based on implicit grids, such as columns in a newspaper, reference grids (and even the streets) on a map, and even the composition of photographs.</p><p>So, as a general rule, use the lowest level of precision necessary to achieve the desired goal. In many cases, one or two divisions are sufficient, as again, we are only looking to aid human judgement by locating the content approximately.</p><p>Consider a straightforward example, a person reading print newspapers, which are often formatted according to a grid consisting of eight columns. A two dimensional quaddress would be very easy for a human actor to judge, record and then use to relocate the content in context. A three dimensional quaddress would quite precisely locate the content, but would also be significantly more difficult to judge for encoding and decoding by human actors. Because quaddresses can have mixed specificity, higher precision can be used on a per-case basis where it is genuinely warranted.</p><p>Greater precision may be genuinely desirable for very large, or very detailed originals from which multiple derivatives are created. The approach for implementing and interpreting quaddresses is the same regardless of how many divisions are used, and for non-human actors there is no theoretical upper limit to the degree of precision employed, and greater specificity has minimal impact on encoding and decoding performance.</p><p>Note too that this approach is compatible with mixed levels of precision on a per-item basis as needed. For example, given a collection of otherwise related images, one could decide to use one or two divisions for most derivatives while specifying higher divisions on other images as needed. There is no reason to do an up-front review of data to decide the highest level of precision likely to be needed across a collection, or in a publication, instead use mixed levels of specificity, only using higher divisions when absolutely necessary.</p><pre><code>
+</code></pre>
+<figure class="image"> 
+
+    <svg width="499.15" height="499.15" version="1.1" viewBox="0 0 499.15 499.15" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#ebaf36">
+  <rect x="2.7921" y="2.7921" width="123.39" height="123.39" stroke-width=".49356"/>
+  <g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)" stroke-width="11.314">
+   <rect x="-3.132e-6" width="1e3" height="500"/>
+   <rect transform="rotate(-90)" x="-1e3" y="500" width="1e3" height="500"/>
+   <rect transform="rotate(-90)" x="-1e3" width="1e3" height="500"/>
+   <rect y="500" width="1e3" height="500"/>
+  </g>
+  <g stroke-width=".49356">
+   <rect x="126.18" y="2.7921" width="123.39" height="123.39"/>
+   <rect x="2.7921" y="126.18" width="123.39" height="123.39"/>
+   <rect x="126.18" y="126.18" width="123.39" height="123.39"/>
+   <rect x="249.57" y="2.7921" width="123.39" height="123.39"/>
+   <rect x="372.96" y="2.7921" width="123.39" height="123.39"/>
+   <rect x="249.57" y="126.18" width="123.39" height="123.39"/>
+   <rect x="372.96" y="126.18" width="123.39" height="123.39"/>
+   <rect x="2.7921" y="249.57" width="123.39" height="123.39"/>
+   <rect x="126.18" y="249.57" width="123.39" height="123.39"/>
+   <rect x="2.7921" y="372.96" width="123.39" height="123.39"/>
+   <rect x="126.18" y="372.96" width="123.39" height="123.39"/>
+   <rect x="249.57" y="249.57" width="123.39" height="123.39"/>
+   <rect x="372.96" y="249.57" width="123.39" height="123.39"/>
+  </g>
+ </g>
+ <rect x="249.57" y="372.96" width="123.39" height="123.39" fill="#ebaf36" fill-opacity=".40849" stroke="#ebaf36" stroke-width=".49356"/>
+ <rect x="372.96" y="372.96" width="123.39" height="123.39" fill="none" stroke="#ebaf36" stroke-width=".49356"/>
+ <g font-family="sans-serif">
+  <g font-size="96px">
+   <g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)">
+    <text x="93.617172" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96px">1</tspan></text>
+    <text x="343.61719" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96px">2</tspan></text>
+    <text x="93.61718" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96px">3</tspan></text>
+    <text x="343.61719" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96px">4</tspan></text>
+   </g>
+   <g transform="matrix(.49356 0 0 .49356 247.11 2.7921)">
+    <text x="93.617172" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96px">1</tspan></text>
+    <text x="343.61719" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96px">2</tspan></text>
+    <text x="93.61718" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96px">3</tspan></text>
+    <text x="343.61719" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96px">4</tspan></text>
+   </g>
+   <g transform="matrix(.49356 0 0 .49356 3.2856 249.08)">
+    <text x="93.617172" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96px">1</tspan></text>
+    <text x="343.61719" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96px">2</tspan></text>
+    <text x="93.61718" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96px">3</tspan></text>
+    <text x="343.61719" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96px">4</tspan></text>
+   </g>
+   <g transform="matrix(.49356 0 0 .49356 247.6 249.08)">
+    <text x="93.617172" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96px">1</tspan></text>
+    <text x="343.61719" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96px">2</tspan></text>
+    <text x="93.61718" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96px">3</tspan></text>
+    <text x="343.61719" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96px">4</tspan></text>
+   </g>
+  </g>
+  <g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)" font-size="192px">
+   <text x="185.97028" y="319.09995" style="line-height:1.25" xml:space="preserve"><tspan x="185.97028" y="319.09995" fill="#ebaf36" font-size="192px">1</tspan></text>
+   <text x="686.86072" y="319.09995" style="line-height:1.25" xml:space="preserve"><tspan x="686.86072" y="319.09995" fill="#ebaf36" font-size="192px">2</tspan></text>
+   <text x="185.97028" y="819.68884" style="line-height:1.25" xml:space="preserve"><tspan x="185.97028" y="819.68884" fill="#ebaf36" font-size="192px">3</tspan></text>
+   <text x="686.86072" y="819.68884" style="line-height:1.25" xml:space="preserve"><tspan x="686.86072" y="819.68884" fill="#ebaf36" font-size="192px">4</tspan></text>
+  </g>
+ </g>
+</svg>
+
+
+
+<figcaption></figcaption>
+</figure> 
+<p>Essentially, quaddresses are a textual description of visual data. Quaddresses in citations may be abbreviated as in the following real-world example:</p>
+<figure>
+<blockquote>
+<p>— 11 Nov 1937, &ldquo;In Tribute to Emily Mills&rdquo;, The Ithaca Journal, Ithaca NY, p2, q212, newspapers.com.</p>
+</blockquote>
+</figure>
+<p>Quaddressessing is  a simple, intuitive, universally applicable tool of focus. The value to the human quaddress consumer is that it greatly constrains the scan area of the original document when locating the citation in context, at which point, human judgement can quickly and easily locate the original precisely. As with my approach to <a href="http://thisismitime.com">mitime</a>, I intentionally sacrifice precision for simplicity to increase both encoding and decoding efficiency.</p>
+<p>High precision is often not needed, and for human actors, makes both the metadata encoding and location resolution counter-productively complex. This approach is more efficient because it simply seeks to enhance human judgement rather than get in its way. Quaddresses are a tool of focus, not measurement. Encoding is estimated, decoding is approximated.</p>
+<p>Quaddressing is simple and leverages the natural human ability to accurately estimate halves (and thus quarters), even of asymmetrical shapes. Many documents and artifacts are themselves based on implicit grids, such as columns in a newspaper, reference grids (and even the streets) on a map, and even the composition of photographs.</p>
+<p>So, as a general rule, use the lowest level of precision necessary to achieve the desired goal. In many cases, one or two divisions are sufficient, as again, we are only looking to aid human judgement by locating the content approximately.</p>
+<p>Consider a straightforward example, a person reading print newspapers, which are often formatted according to a grid consisting of eight columns. A two dimensional quaddress would be very easy for a human actor to judge, record and then use to relocate the content in context. A three dimensional quaddress would quite precisely locate the content, but would also be significantly more difficult to judge for encoding and decoding by human actors. Because quaddresses can have mixed specificity, higher precision can be used on a per-case basis where it is genuinely warranted.</p>
+<p>Greater precision may be genuinely desirable for very large, or very detailed originals from which multiple derivatives are created. The approach for implementing and interpreting quaddresses is the same regardless of how many divisions are used, and for non-human actors there is no theoretical upper limit to the degree of precision employed, and greater specificity has minimal impact on encoding and decoding performance.</p>
+<p>Note too that this approach is compatible with mixed levels of precision on a per-item basis as needed. For example, given a collection of otherwise related images, one could decide to use one or two divisions for most derivatives while specifying higher divisions on other images as needed. There is no reason to do an up-front review of data to decide the highest level of precision likely to be needed across a collection, or in a publication, instead use mixed levels of specificity, only using higher divisions when absolutely necessary.</p>
+<pre><code>
 collection1.image1.quaddress = "43";
 collection1.image2.quaddress = "4321";
-</code></pre><p>And so it should be clear that quaddresses of different levels of specificity can be combined in multiple references to the same original as the relative proportions of the areas being referenced warrant it:</p><pre><code>
+</code></pre>
+<p>And so it should be clear that quaddresses of different levels of specificity can be combined in multiple references to the same original as the relative proportions of the areas being referenced warrant it:</p>
+<pre><code>
 collection1.image1.quaddress1 = "43";
 collection1.image1.quaddress2 = "4321";
-</code></pre><p>This also illustrates that the length of the quaddress itself implies the number of divisions applied, and therefore, the relative square size of the individual quaddress, the scope of the referenced content within the original.</p><p>Additionally, different quaddress spaces can be applied to the derivatives themselves, such as specifying a location within a photo within a page. The photo would have its quaddress within the page, probably at a low specificity, and then a derivative image of the photo would have its own quaddress space, possibly having greater precision.</p><p>Obviously, many originals will not be perfectly square, and it is important to remember that this approach is purposely an abstraction of a map. To interpret a quaddress against say, an 11x17 sheet a paper, one can easily make the adjustment because division by quadrants only requires accurately judging the approximate midpoints along an X and Y axis for an area, something that is very natural for everyone.</p><figure class=image><svg width="206.05" height="501.16" viewBox="0 0 206.05 501.16" xmlns="http://www.w3.org/2000/svg"><g transform="matrix(.20374 0 0 .49555 1.1526 2.8033)" fill="none" stroke="#ebaf36"><rect x="-15259e-9" width="250" height="250"/><g stroke-width="11.314"><rect x="-3132e-9" width="1e3" height="500"/><rect transform="rotate(-90)" x="-1e3" y="500" width="1e3" height="500"/><rect transform="rotate(-90)" x="-1e3" width="1e3" height="500"/><rect y="500" width="1e3" height="500"/></g><rect x="250" y="-3132e-9" width="250" height="250"/><rect x="-1e-5" y="250" width="250" height="250"/><rect x="250" y="250" width="250" height="250"/><rect x="500" y="-3132e-9" width="250" height="250"/><rect x="750" y="-3132e-9" width="250" height="250"/><rect x="500" y="250" width="250" height="250"/><rect x="750" y="250" width="250" height="250"/><rect x=".13654e-5" y="500" width="250" height="250"/><rect x="250" y="500" width="250" height="250"/><rect x="16624e-9" y="750" width="250" height="250"/><rect x="250" y="750" width="250" height="250"/><rect x="500" y="500" width="250" height="250"/><rect x="750" y="500" width="250" height="250"/><rect x="500" y="750" width="250" height="250"/><rect x="750" y="750" width="250" height="250"/></g><g font-family="sans-serif"><g font-size="96"><g transform="matrix(.20374 0 0 .49555 1.1526 2.8033)"><text x="93.617172" y="159.99219" style="line-height:1.25"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96">4</tspan></text></g><g transform="matrix(.20374 0 0 .49555 102.01 2.8033)"><text x="93.617172" y="159.99219" style="line-height:1.25"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96">4</tspan></text></g><g transform="matrix(.20374 0 0 .49555 1.3563 250.08)"><text x="93.617172" y="159.99219" style="line-height:1.25"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96">4</tspan></text></g><g transform="matrix(.20374 0 0 .49555 102.21 250.08)"><text x="93.617172" y="159.99219" style="line-height:1.25"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96">4</tspan></text></g></g><g transform="matrix(.20374 0 0 .49555 1.1526 2.8033)" font-size="192"><text x="185.97028" y="319.09995" style="line-height:1.25"><tspan x="185.97028" y="319.09995" fill="#ebaf36" font-size="192">1</tspan></text><text x="686.86072" y="319.09995" style="line-height:1.25"><tspan x="686.86072" y="319.09995" fill="#ebaf36" font-size="192">2</tspan></text><text x="185.97028" y="819.68884" style="line-height:1.25"><tspan x="185.97028" y="819.68884" fill="#ebaf36" font-size="192">3</tspan></text><text x="686.86072" y="819.68884" style="line-height:1.25"><tspan x="686.86072" y="819.68884" fill="#ebaf36" font-size="192">4</tspan></text></g></g></svg><figcaption></figcaption></figure><p>The same can be said of non-rectilinear originals. As long as the grid is imagined to be the same maximum width and maximum height of the original–that is to say, the grid encompasses the object’s minimum bounding box–the approach works, as again, using human judgement to apply the mapping is easily understood by anyone.</p><figure class=image><svg width="499.15" height="499.15" viewBox="0 0 499.15 499.15" id="svg142" sodipodi:docname="2d-irregular-grid.svg" inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs146"/><sodipodi:namedview id="namedview144" pagecolor="#505050" bordercolor="#eeeeee" borderopacity="1" inkscape:pageshadow="0" inkscape:pageopacity="0" inkscape:pagecheckerboard="0" showgrid="false" inkscape:zoom="1.4142136" inkscape:cx="182.43355" inkscape:cy="212.48559" inkscape:window-width="1920" inkscape:window-height="1080" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-maximized="1" inkscape:current-layer="svg142"/><path sodipodi:type="star" style="fill:#ebaf36;fill-opacity:.5;stroke:none;stroke-width:13.0961;stroke-opacity:1" id="path1340" inkscape:flatsided="false" sodipodi:sides="5" sodipodi:cx="46.026657" sodipodi:cy="168.45021" sodipodi:r1="185.05557" sodipodi:r2="92.527786" sodipodi:arg1=".52067123" sodipodi:arg2="1.1489898" inkscape:rounded="0" inkscape:randomized="0" d="M206.55968 260.50842 83.908394 252.86801 8.0815241 349.57374-22.553343 230.56442-137.95774 188.33249-34.239851 122.4211-29.736823-.38538988 64.999227 77.888448 183.18665 44.221789 138.01886 158.50907z" inkscape:transform-center-x="-41.687437" inkscape:transform-center-y="-88.583089" transform="matrix(1.181806,0.59491537,-0.52880255,1.3447258,284.60615,23.154177)"/><g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)" fill="none" stroke="#ebaf36" id="g46"><rect x="-15259e-9" width="250" height="250" id="rect4"/><g stroke-width="11.314" id="g14"><rect x="-3132e-9" width="1e3" height="500" id="rect6"/><rect transform="rotate(-90)" x="-1e3" y="500" width="1e3" height="500" id="rect8"/><rect transform="rotate(-90)" x="-1e3" width="1e3" height="500" id="rect10"/><rect y="500" width="1e3" height="500" id="rect12"/></g><rect x="250" y="-3132e-9" width="250" height="250" id="rect16"/><rect x="-1e-5" y="250" width="250" height="250" id="rect18"/><rect x="250" y="250" width="250" height="250" id="rect20"/><rect x="500" y="-3132e-9" width="250" height="250" id="rect22"/><rect x="750" y="-3132e-9" width="250" height="250" id="rect24"/><rect x="500" y="250" width="250" height="250" id="rect26"/><rect x="750" y="250" width="250" height="250" id="rect28"/><rect x=".13654e-5" y="500" width="250" height="250" id="rect30"/><rect x="250" y="500" width="250" height="250" id="rect32"/><rect x="16624e-9" y="750" width="250" height="250" id="rect34"/><rect x="250" y="750" width="250" height="250" id="rect36"/><rect x="500" y="500" width="250" height="250" id="rect38"/><rect x="750" y="500" width="250" height="250" id="rect40"/><rect x="500" y="750" width="250" height="250" id="rect42"/><rect x="750" y="750" width="250" height="250" id="rect44"/></g><g font-family="sans-serif" id="g140"><g font-size="96" id="g120"><g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)" id="g64"><text x="93.617172" y="159.99219" style="line-height:1.25" id="text50"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96" id="tspan48">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25" id="text54"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96" id="tspan52">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25" id="text58"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96" id="tspan56">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25" id="text62"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96" id="tspan60">4</tspan></text></g><g transform="matrix(.49356 0 0 .49356 247.11 2.7921)" id="g82"><text x="93.617172" y="159.99219" style="line-height:1.25" id="text68"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96" id="tspan66">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25" id="text72"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96" id="tspan70">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25" id="text76"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96" id="tspan74">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25" id="text80"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96" id="tspan78">4</tspan></text></g><g transform="matrix(.49356 0 0 .49356 3.2856 249.08)" id="g100"><text x="93.617172" y="159.99219" style="line-height:1.25" id="text86"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96" id="tspan84">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25" id="text90"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96" id="tspan88">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25" id="text94"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96" id="tspan92">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25" id="text98"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96" id="tspan96">4</tspan></text></g><g transform="matrix(.49356 0 0 .49356 247.6 249.08)" id="g118"><text x="93.617172" y="159.99219" style="line-height:1.25" id="text104"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96" id="tspan102">1</tspan></text><text x="343.61719" y="159.99219" style="line-height:1.25" id="text108"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96" id="tspan106">2</tspan></text><text x="93.61718" y="409.99219" style="line-height:1.25" id="text112"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96" id="tspan110">3</tspan></text><text x="343.61719" y="409.99219" style="line-height:1.25" id="text116"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96" id="tspan114">4</tspan></text></g></g><g transform="matrix(.49356 0 0 .49356 2.7921 2.7921)" font-size="192" id="g138"><text x="185.97028" y="319.09995" style="line-height:1.25" id="text124"><tspan x="185.97028" y="319.09995" fill="#ebaf36" font-size="192" id="tspan122">1</tspan></text><text x="686.86072" y="319.09995" style="line-height:1.25" id="text128"><tspan x="686.86072" y="319.09995" fill="#ebaf36" font-size="192" id="tspan126">2</tspan></text><text x="185.97028" y="819.68884" style="line-height:1.25" id="text132"><tspan x="185.97028" y="819.68884" fill="#ebaf36" font-size="192" id="tspan130">3</tspan></text><text x="686.86072" y="819.68884" style="line-height:1.25" id="text136"><tspan x="686.86072" y="819.68884" fill="#ebaf36" font-size="192" id="tspan134">4</tspan></text></g></g></svg><figcaption></figcaption></figure><p>The shape of the original artifact is one factor to consider when deciding to include higher divisions.</p><p>In my use cases, such as referencing text within an article on a newspaper page, I only need to specify the approximate starting point of the content. Nothing is gained by, for example, trying to encode the overall area the derivative image occupies. However, this use case and others can be very straightforwardly accommodated, as shown in these two divisional grid examples:</p><pre><code>
+</code></pre>
+<p>This also illustrates that the length of the quaddress itself implies the number of divisions applied, and therefore, the relative square size of the individual quaddress, the scope of the referenced content within the original.</p>
+<p>Additionally, different quaddress spaces can be applied to the derivatives themselves, such as specifying a location within a photo within a page. The photo would have its quaddress within the page, probably at a low specificity, and then a derivative image of the photo would have its own quaddress space, possibly having greater precision.</p>
+<p>Obviously, many originals will not be perfectly square, and it is important to remember that this approach is purposely an abstraction of a map. To interpret a quaddress against say, an 11x17 sheet a paper, one can easily make the adjustment because division by quadrants only requires accurately judging the approximate midpoints along an X and Y axis for an area, something that is very natural for everyone.</p>
+<figure class="image"> 
+
+    <svg width="206.05" height="501.16" version="1.1" viewBox="0 0 206.05 501.16" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(.20374 0 0 .49555 1.1526 2.8033)" fill="none" stroke="#ebaf36">
+  <rect x="-1.5259e-5" width="250" height="250"/>
+  <g stroke-width="11.314">
+   <rect x="-3.132e-6" width="1e3" height="500"/>
+   <rect transform="rotate(-90)" x="-1e3" y="500" width="1e3" height="500"/>
+   <rect transform="rotate(-90)" x="-1e3" width="1e3" height="500"/>
+   <rect y="500" width="1e3" height="500"/>
+  </g>
+  <rect x="250" y="-3.132e-6" width="250" height="250"/>
+  <rect x="-1e-5" y="250" width="250" height="250"/>
+  <rect x="250" y="250" width="250" height="250"/>
+  <rect x="500" y="-3.132e-6" width="250" height="250"/>
+  <rect x="750" y="-3.132e-6" width="250" height="250"/>
+  <rect x="500" y="250" width="250" height="250"/>
+  <rect x="750" y="250" width="250" height="250"/>
+  <rect x="1.3654e-6" y="500" width="250" height="250"/>
+  <rect x="250" y="500" width="250" height="250"/>
+  <rect x="1.6624e-5" y="750" width="250" height="250"/>
+  <rect x="250" y="750" width="250" height="250"/>
+  <rect x="500" y="500" width="250" height="250"/>
+  <rect x="750" y="500" width="250" height="250"/>
+  <rect x="500" y="750" width="250" height="250"/>
+  <rect x="750" y="750" width="250" height="250"/>
+ </g>
+ <g font-family="sans-serif">
+  <g font-size="96px">
+   <g transform="matrix(.20374 0 0 .49555 1.1526 2.8033)">
+    <text x="93.617172" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96px">1</tspan></text>
+    <text x="343.61719" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96px">2</tspan></text>
+    <text x="93.61718" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96px">3</tspan></text>
+    <text x="343.61719" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96px">4</tspan></text>
+   </g>
+   <g transform="matrix(.20374 0 0 .49555 102.01 2.8033)">
+    <text x="93.617172" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96px">1</tspan></text>
+    <text x="343.61719" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96px">2</tspan></text>
+    <text x="93.61718" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96px">3</tspan></text>
+    <text x="343.61719" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96px">4</tspan></text>
+   </g>
+   <g transform="matrix(.20374 0 0 .49555 1.3563 250.08)">
+    <text x="93.617172" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96px">1</tspan></text>
+    <text x="343.61719" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96px">2</tspan></text>
+    <text x="93.61718" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96px">3</tspan></text>
+    <text x="343.61719" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96px">4</tspan></text>
+   </g>
+   <g transform="matrix(.20374 0 0 .49555 102.21 250.08)">
+    <text x="93.617172" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.617172" y="159.99219" fill="#ebaf36" font-size="96px">1</tspan></text>
+    <text x="343.61719" y="159.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="159.99219" fill="#ebaf36" font-size="96px">2</tspan></text>
+    <text x="93.61718" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="93.61718" y="409.99219" fill="#ebaf36" font-size="96px">3</tspan></text>
+    <text x="343.61719" y="409.99219" style="line-height:1.25" xml:space="preserve"><tspan x="343.61719" y="409.99219" fill="#ebaf36" font-size="96px">4</tspan></text>
+   </g>
+  </g>
+  <g transform="matrix(.20374 0 0 .49555 1.1526 2.8033)" font-size="192px">
+   <text x="185.97028" y="319.09995" style="line-height:1.25" xml:space="preserve"><tspan x="185.97028" y="319.09995" fill="#ebaf36" font-size="192px">1</tspan></text>
+   <text x="686.86072" y="319.09995" style="line-height:1.25" xml:space="preserve"><tspan x="686.86072" y="319.09995" fill="#ebaf36" font-size="192px">2</tspan></text>
+   <text x="185.97028" y="819.68884" style="line-height:1.25" xml:space="preserve"><tspan x="185.97028" y="819.68884" fill="#ebaf36" font-size="192px">3</tspan></text>
+   <text x="686.86072" y="819.68884" style="line-height:1.25" xml:space="preserve"><tspan x="686.86072" y="819.68884" fill="#ebaf36" font-size="192px">4</tspan></text>
+  </g>
+ </g>
+</svg>
+
+
+
+<figcaption></figcaption>
+</figure> 
+<p>The same can be said of non-rectilinear originals. As long as the grid is imagined to be the same maximum width and maximum height of the original–that is to say, the grid encompasses the object’s minimum bounding box–the approach works, as again, using human judgement to apply the mapping is easily understood by anyone.</p>
+<figure class="image"> 
+
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="499.15"
+   height="499.15"
+   version="1.1"
+   viewBox="0 0 499.15 499.15"
+   id="svg142"
+   sodipodi:docname="2d-irregular-grid.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs146" />
+  <sodipodi:namedview
+     id="namedview144"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="182.43355"
+     inkscape:cy="212.48559"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg142" />
+  <path
+     sodipodi:type="star"
+     style="fill:#ebaf36;fill-opacity:0.5;stroke:none;stroke-width:13.0961;stroke-opacity:1"
+     id="path1340"
+     inkscape:flatsided="false"
+     sodipodi:sides="5"
+     sodipodi:cx="46.026657"
+     sodipodi:cy="168.45021"
+     sodipodi:r1="185.05557"
+     sodipodi:r2="92.527786"
+     sodipodi:arg1="0.52067123"
+     sodipodi:arg2="1.1489898"
+     inkscape:rounded="0"
+     inkscape:randomized="0"
+     d="M 206.55968,260.50842 83.908394,252.86801 8.0815241,349.57374 -22.553343,230.56442 -137.95774,188.33249 -34.239851,122.4211 -29.736823,-0.38538988 64.999227,77.888448 183.18665,44.221789 138.01886,158.50907 Z"
+     inkscape:transform-center-x="-41.687437"
+     inkscape:transform-center-y="-88.583089"
+     transform="matrix(1.181806,0.59491537,-0.52880255,1.3447258,284.60615,23.154177)" />
+  <g
+     transform="matrix(.49356 0 0 .49356 2.7921 2.7921)"
+     fill="none"
+     stroke="#ebaf36"
+     id="g46">
+    <rect
+       x="-1.5259e-5"
+       width="250"
+       height="250"
+       id="rect4" />
+    <g
+       stroke-width="11.314"
+       id="g14">
+      <rect
+         x="-3.132e-6"
+         width="1e3"
+         height="500"
+         id="rect6" />
+      <rect
+         transform="rotate(-90)"
+         x="-1e3"
+         y="500"
+         width="1e3"
+         height="500"
+         id="rect8" />
+      <rect
+         transform="rotate(-90)"
+         x="-1e3"
+         width="1e3"
+         height="500"
+         id="rect10" />
+      <rect
+         y="500"
+         width="1e3"
+         height="500"
+         id="rect12" />
+    </g>
+    <rect
+       x="250"
+       y="-3.132e-6"
+       width="250"
+       height="250"
+       id="rect16" />
+    <rect
+       x="-1e-5"
+       y="250"
+       width="250"
+       height="250"
+       id="rect18" />
+    <rect
+       x="250"
+       y="250"
+       width="250"
+       height="250"
+       id="rect20" />
+    <rect
+       x="500"
+       y="-3.132e-6"
+       width="250"
+       height="250"
+       id="rect22" />
+    <rect
+       x="750"
+       y="-3.132e-6"
+       width="250"
+       height="250"
+       id="rect24" />
+    <rect
+       x="500"
+       y="250"
+       width="250"
+       height="250"
+       id="rect26" />
+    <rect
+       x="750"
+       y="250"
+       width="250"
+       height="250"
+       id="rect28" />
+    <rect
+       x="1.3654e-6"
+       y="500"
+       width="250"
+       height="250"
+       id="rect30" />
+    <rect
+       x="250"
+       y="500"
+       width="250"
+       height="250"
+       id="rect32" />
+    <rect
+       x="1.6624e-5"
+       y="750"
+       width="250"
+       height="250"
+       id="rect34" />
+    <rect
+       x="250"
+       y="750"
+       width="250"
+       height="250"
+       id="rect36" />
+    <rect
+       x="500"
+       y="500"
+       width="250"
+       height="250"
+       id="rect38" />
+    <rect
+       x="750"
+       y="500"
+       width="250"
+       height="250"
+       id="rect40" />
+    <rect
+       x="500"
+       y="750"
+       width="250"
+       height="250"
+       id="rect42" />
+    <rect
+       x="750"
+       y="750"
+       width="250"
+       height="250"
+       id="rect44" />
+  </g>
+  <g
+     font-family="sans-serif"
+     id="g140">
+    <g
+       font-size="96px"
+       id="g120">
+      <g
+         transform="matrix(.49356 0 0 .49356 2.7921 2.7921)"
+         id="g64">
+        <text
+           x="93.617172"
+           y="159.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text50"><tspan
+             x="93.617172"
+             y="159.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan48">1</tspan></text>
+        <text
+           x="343.61719"
+           y="159.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text54"><tspan
+             x="343.61719"
+             y="159.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan52">2</tspan></text>
+        <text
+           x="93.61718"
+           y="409.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text58"><tspan
+             x="93.61718"
+             y="409.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan56">3</tspan></text>
+        <text
+           x="343.61719"
+           y="409.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text62"><tspan
+             x="343.61719"
+             y="409.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan60">4</tspan></text>
+      </g>
+      <g
+         transform="matrix(.49356 0 0 .49356 247.11 2.7921)"
+         id="g82">
+        <text
+           x="93.617172"
+           y="159.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text68"><tspan
+             x="93.617172"
+             y="159.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan66">1</tspan></text>
+        <text
+           x="343.61719"
+           y="159.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text72"><tspan
+             x="343.61719"
+             y="159.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan70">2</tspan></text>
+        <text
+           x="93.61718"
+           y="409.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text76"><tspan
+             x="93.61718"
+             y="409.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan74">3</tspan></text>
+        <text
+           x="343.61719"
+           y="409.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text80"><tspan
+             x="343.61719"
+             y="409.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan78">4</tspan></text>
+      </g>
+      <g
+         transform="matrix(.49356 0 0 .49356 3.2856 249.08)"
+         id="g100">
+        <text
+           x="93.617172"
+           y="159.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text86"><tspan
+             x="93.617172"
+             y="159.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan84">1</tspan></text>
+        <text
+           x="343.61719"
+           y="159.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text90"><tspan
+             x="343.61719"
+             y="159.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan88">2</tspan></text>
+        <text
+           x="93.61718"
+           y="409.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text94"><tspan
+             x="93.61718"
+             y="409.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan92">3</tspan></text>
+        <text
+           x="343.61719"
+           y="409.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text98"><tspan
+             x="343.61719"
+             y="409.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan96">4</tspan></text>
+      </g>
+      <g
+         transform="matrix(.49356 0 0 .49356 247.6 249.08)"
+         id="g118">
+        <text
+           x="93.617172"
+           y="159.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text104"><tspan
+             x="93.617172"
+             y="159.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan102">1</tspan></text>
+        <text
+           x="343.61719"
+           y="159.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text108"><tspan
+             x="343.61719"
+             y="159.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan106">2</tspan></text>
+        <text
+           x="93.61718"
+           y="409.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text112"><tspan
+             x="93.61718"
+             y="409.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan110">3</tspan></text>
+        <text
+           x="343.61719"
+           y="409.99219"
+           style="line-height:1.25"
+           xml:space="preserve"
+           id="text116"><tspan
+             x="343.61719"
+             y="409.99219"
+             fill="#ebaf36"
+             font-size="96px"
+             id="tspan114">4</tspan></text>
+      </g>
+    </g>
+    <g
+       transform="matrix(.49356 0 0 .49356 2.7921 2.7921)"
+       font-size="192px"
+       id="g138">
+      <text
+         x="185.97028"
+         y="319.09995"
+         style="line-height:1.25"
+         xml:space="preserve"
+         id="text124"><tspan
+           x="185.97028"
+           y="319.09995"
+           fill="#ebaf36"
+           font-size="192px"
+           id="tspan122">1</tspan></text>
+      <text
+         x="686.86072"
+         y="319.09995"
+         style="line-height:1.25"
+         xml:space="preserve"
+         id="text128"><tspan
+           x="686.86072"
+           y="319.09995"
+           fill="#ebaf36"
+           font-size="192px"
+           id="tspan126">2</tspan></text>
+      <text
+         x="185.97028"
+         y="819.68884"
+         style="line-height:1.25"
+         xml:space="preserve"
+         id="text132"><tspan
+           x="185.97028"
+           y="819.68884"
+           fill="#ebaf36"
+           font-size="192px"
+           id="tspan130">3</tspan></text>
+      <text
+         x="686.86072"
+         y="819.68884"
+         style="line-height:1.25"
+         xml:space="preserve"
+         id="text136"><tspan
+           x="686.86072"
+           y="819.68884"
+           fill="#ebaf36"
+           font-size="192px"
+           id="tspan134">4</tspan></text>
+    </g>
+  </g>
+</svg>
+
+
+
+<figcaption></figcaption>
+</figure> 
+<p>The shape of the original artifact is one factor to consider when deciding to include higher divisions.</p>
+<p>In my use cases, such as referencing text within an article on a newspaper page, I only need to specify the approximate starting point of the content. Nothing is gained by, for example, trying to encode the overall area the derivative image occupies. However, this use case and others can be very straightforwardly accommodated, as shown in these two divisional grid examples:</p>
+<pre><code>
 # a single quaddress, already discussed
 image.quaddress = "43";
 
@@ -23,4 +901,61 @@ image.quaddresses = "12,22,43";
 image.quadranges = "14-34,22-44";
 
 # etc.
-</code></pre><p>The following is a live demo illustrating quaddresses. For practical reasons, I have limited the demo to a maximum of four divisions:</p><script async src=//jsfiddle.net/asmith607/c4pyzgaq/486/embed/result,js,html,css/></script><p>I believe that in most cases, two divisions are ideal to approximate locations and resolve quaddresses quickly. Three divisions is still manageable, but beyond that, resolving quaddresses starts becoming challenging and inefficient for human actors.</p><p>Notice that by their nature, quaddresses are sortable numerically, and if the number of divisions is constant, or alternately, the quaddresses are zero-padded, quaddresses are sortable lexicographically.</p></div><nav class=tags><ul><li><a href=/tags/historical-research>historical-research</a></li><li><a href=/tags/digitization>digitization</a></li><li><a href=/tags/metadata>metadata</a></li></ul></nav></article></main><aside><div><div><h3>LATEST POSTS</h3></div><div><ul><li><a href=/articles/quaddress-cont/>quaddresses: imprecision in practice</a></li><li><a href=/articles/woodhull-sentinel-digitization/>woodhull sentinel digitization and preservation project</a></li><li><a href=/articles/minimal-chess-pieces/>Pip: Minimal Two-Dimensional Chess Piece Set</a></li><li><a href=/articles/wine-cube/>Wine Cube: simple wine bottle storage model</a></li><li><a href=/articles/cell/>cell: minimal geometric font</a></li></ul></div></div></aside><footer><p clas=copyright>&copy; <span id=cwyear></span> <a href=https://ajsmith.co/>a j smith</a></p><script>document.getElementById("cwyear").innerHTML=(new Date).getFullYear()</script></footer></body></html>
+</code></pre>
+<p>The following is a live demo illustrating quaddresses. For practical reasons, I have limited the demo to a maximum of four divisions:</p>
+
+
+    <script async src="//jsfiddle.net/asmith607/c4pyzgaq/486/embed/result,js,html,css/"></script>
+
+
+<p>I believe that in most cases, two divisions are ideal to approximate locations and resolve quaddresses quickly. Three divisions is still manageable, but beyond that, resolving quaddresses starts becoming challenging and inefficient for human actors.</p>
+<p>Notice that by their nature, quaddresses are sortable numerically, and if the number of divisions is constant, or alternately, the quaddresses are zero-padded, quaddresses are sortable lexicographically.</p>
+            </div>
+            
+<nav class="tags">
+    <ul>
+        
+        <li><a href="/tags/historical-research">historical-research</a></li>
+        
+        <li><a href="/tags/digitization">digitization</a></li>
+        
+        <li><a href="/tags/metadata">metadata</a></li>
+        
+    </ul>
+</nav>
+
+
+            </article>
+        </main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/articles/quaddress-cont/">quaddresses: imprecision in practice</a></li>
+				
+				<li><a href="/articles/woodhull-sentinel-digitization/">woodhull sentinel digitization and preservation project</a></li>
+				
+				<li><a href="/articles/minimal-chess-pieces/">Pip: Minimal Two-Dimensional Chess Piece Set</a></li>
+				
+				<li><a href="/articles/wine-cube/">Wine Cube: simple wine bottle storage model</a></li>
+				
+				<li><a href="/articles/cell/">cell: minimal geometric font</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+        <footer>
+    <p clas="copyright">&copy; <span id="cwyear"></span> <a href="http://localhost:1313/">a j smith</a></p>
+    <script> document.getElementById("cwyear").innerHTML = (new Date().getFullYear());</script>
+</footer>
+
+        
+    </body>
+</html> 

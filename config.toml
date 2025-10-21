@@ -5,6 +5,7 @@ publishDir = "docs"
 enableGitInfo = true
 footnoteReturnLinkContents = "↩"
 lastmod = [":fileModTime", ":default"] # auto populates lastmod date
+pagination.pagerSize = 20
 
 [taxonomies]
   tag = "tags"
@@ -27,3 +28,6 @@ lastmod = [":fileModTime", ":default"] # auto populates lastmod date
  
 [markup]
   _merge = "deep"
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
