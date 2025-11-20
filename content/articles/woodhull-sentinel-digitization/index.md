@@ -100,7 +100,7 @@ Once the images pass inspection and are renamed, we will create derivative files
 
 Adam and Leslie will return to Backstage Library works to retrieve the newspapers in archival storage boxes as well as a hard drive with the digitized files. 
 
-After returning to Woodhull, Adam will reinventory and inspect the physical papers and Leslie will then move them to their permanent storage location. 
+After returning to Woodhull, Adam will re-inventory and inspect the physical papers and Leslie will then move them to their permanent storage location. 
 
 Adam will do quality control checks on the digital files and package them for distribution.
 
@@ -111,4 +111,42 @@ If Adam or Leslie discover any issues, they will promptly report them, otherwise
 Backstage Library Works reports that the material preparation and rehousing phase has begun in preparation for digitization. 
 
 So far, no issues to report.
+
+## October 20, 2025 Update
+
+Material preparation and rehouse has begun. No issues to report.
+
+## October 23, 2025 Update
+
+Backstage reports:
+
+> We began preparing and rehousing the materials this week, and everything is going smoothly so far. The materials are a bit more fragile than anticipated, which has required some additional mending, but this remains well within the project’s scope.
+>
+> I did want to mention that we’ll need a few more archival boxes than the original estimate of 6. Based on how full the first box is and the total of 394 issues, we’re expecting that we will need an extra 1-2 boxes, bringing the total to 7-8 boxes.
+>
+> The good news is that even with the extra boxes, we’re still within the rehousing budget, so there’s no need to add any extra costs.
+
+## October 27, 2025 Update
+
+Material preparation approximately 25% complete. No issues to report.
+
+## November 3, 2025 Update
+
+Material preparation approximately 50% complete. No issues to report.
+
+## November 10, 2025 Update
+
+Material preparation approximately 75% complete. No issues to report.
+
+## November 17, 2025 Update
+
+Backstage reports:
+
+> We are continuing to prepare your materials, and we are about 90% through the collection.
+>
+> We are expecting to finish the material preparation next week, and we'll start capturing the materials shortly thereafter.
+> 
+> We anticipate that the digital files will be ready for delivery in December.
+> 
+> I have no issues to report this week.
 
