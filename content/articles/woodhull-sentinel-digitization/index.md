@@ -118,7 +118,7 @@ Material preparation and rehouse has begun. No issues to report.
 
 ## October 23, 2025 Update
 
-Backstage reports:
+Backstage reported on October 20:
 
 > We began preparing and rehousing the materials this week, and everything is going smoothly so far. The materials are a bit more fragile than anticipated, which has required some additional mending, but this remains well within the project’s scope.
 >
@@ -140,7 +140,7 @@ Material preparation approximately 75% complete. No issues to report.
 
 ## November 17, 2025 Update
 
-Backstage reports:
+Backstage reported on November 14:
 
 > We are continuing to prepare your materials, and we are about 90% through the collection.
 >
@@ -150,3 +150,8 @@ Backstage reports:
 > 
 > I have no issues to report this week.
 
+## November 24, 2025 Update
+
+Backstage reported on November 21: 
+
+> We started to capture your materials this week! We are about 50% through the collection. I have no issues to report this week.
