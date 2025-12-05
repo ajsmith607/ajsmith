@@ -155,3 +155,9 @@ Backstage reported on November 14:
 Backstage reported on November 21: 
 
 > We started to capture your materials this week! We are about 50% through the collection. I have no issues to report this week.
+
+## December 3, 2025 Update
+
+Backstage reported on December 3:
+
+> We finished capturing your materials this week and are currently inspecting the digital files. After the image inspection is complete, we’ll create the derivative files and prepare the drive. That process is mostly machine time, so it is difficult to predict an exact date for when the files will be ready; however, I estimate that will be towards the end of the month.
