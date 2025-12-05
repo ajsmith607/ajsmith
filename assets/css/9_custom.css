@@ -1,3 +1,6 @@
+/* this adds to, and overrides the default css located at:
+ * undergo/assets/css/5_defaults.css
+ * */
 
 :root {
     --background-color: #554b45;
