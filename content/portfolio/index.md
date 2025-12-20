@@ -11,7 +11,7 @@ A summary of selected projects, present and past.
 
 (Planning.)
 
-{{< svg "/portfolio/images/berry-yard/berryard.svg" "png,code" >}}
+{{< svg "/portfolio/images/berry-yard/berryard.svg" "png" >}}
 
 Logo concept for naturally fermented herbaceous wine, produced from local, organically grown blackberries. My original concept and design.
 
