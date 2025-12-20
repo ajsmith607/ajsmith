@@ -161,3 +161,11 @@ Backstage reported on November 21:
 Backstage reported on December 3:
 
 > We finished capturing your materials this week and are currently inspecting the digital files. After the image inspection is complete, we’ll create the derivative files and prepare the drive. That process is mostly machine time, so it is difficult to predict an exact date for when the files will be ready; however, I estimate that will be towards the end of the month.
+
+## December 19, 2025 Update
+
+Backstage reported on December 19:
+
+> The derivatives have finished being created, and the hard drive is now ready for delivery.
+
+Leslie and Adam are planning to retrieve the digitized files and archived newspapers in January 2026.

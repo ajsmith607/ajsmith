@@ -399,6 +399,44 @@ form .cols {
     top: 24px;
     height: 32px; } }
 
+/* --- SVG --- */
+.svg-tabs {
+  display: flex;
+  gap: 1em;
+  padding: 0;
+  margin: 0 auto;
+  width: fit-content; }
+
+.svg-tabs button {
+  padding: 0.25em 0.5em; }
+
+.svg-content {
+  margin-bottom: 0; }
+
+.svg-tab {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: white; }
+
+.svg-tab.active {
+  font-weight: bold; }
+
+.svg-tab-content {
+  display: none; }
+
+.svg-tab-content.active {
+  display: block; }
+
+.svg-code {
+  overflow: auto; }
+
+.error {
+  color: red;
+  padding: 1em; }
+
 /* this adds to, and overrides the default css located at:
  * undergo/assets/css/5_defaults.css
  * */
