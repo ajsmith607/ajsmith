@@ -2,85 +2,85 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/articles/</loc>
+    <loc>https://ajsmith.co/articles/</loc>
     <lastmod>2023-09-04T15:55:51-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/portfolio/</loc>
+    <loc>https://ajsmith.co/portfolio/</loc>
     <lastmod>2025-12-19T20:15:41-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/contact/</loc>
+    <loc>https://ajsmith.co/contact/</loc>
     <lastmod>2023-09-04T15:55:51-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://ajsmith.co/</loc>
     <lastmod>2025-12-19T20:15:41-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/digitization/</loc>
+    <loc>https://ajsmith.co/tags/digitization/</loc>
     <lastmod>2025-12-19T20:11:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/historical-research/</loc>
+    <loc>https://ajsmith.co/tags/historical-research/</loc>
     <lastmod>2025-07-09T20:39:42-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/metadata/</loc>
+    <loc>https://ajsmith.co/tags/metadata/</loc>
     <lastmod>2025-07-09T20:39:42-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/quaddress-cont/</loc>
+    <loc>https://ajsmith.co/articles/quaddress-cont/</loc>
     <lastmod>2025-07-09T20:39:42-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://ajsmith.co/tags/</loc>
     <lastmod>2025-12-19T20:11:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/woodhull-sentinel-digitization/</loc>
+    <loc>https://ajsmith.co/articles/woodhull-sentinel-digitization/</loc>
     <lastmod>2025-12-19T20:11:00-05:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/chess/</loc>
+    <loc>https://ajsmith.co/tags/chess/</loc>
     <lastmod>2024-10-23T08:45:17-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/design/</loc>
+    <loc>https://ajsmith.co/tags/design/</loc>
     <lastmod>2024-10-23T08:45:17-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/minimal-chess-pieces/</loc>
+    <loc>https://ajsmith.co/articles/minimal-chess-pieces/</loc>
     <lastmod>2024-10-23T08:45:17-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cad/</loc>
+    <loc>https://ajsmith.co/tags/cad/</loc>
     <lastmod>2024-10-23T08:45:17-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/wine-cube/</loc>
+    <loc>https://ajsmith.co/articles/wine-cube/</loc>
     <lastmod>2024-10-23T08:45:17-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/bash/</loc>
+    <loc>https://ajsmith.co/tags/bash/</loc>
     <lastmod>2024-10-23T08:45:17-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/cell/</loc>
+    <loc>https://ajsmith.co/articles/cell/</loc>
     <lastmod>2024-08-25T22:51:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/fonts/</loc>
+    <loc>https://ajsmith.co/tags/fonts/</loc>
     <lastmod>2024-08-25T22:51:12-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/github-pages/</loc>
+    <loc>https://ajsmith.co/tags/github-pages/</loc>
     <lastmod>2024-10-23T08:45:17-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/jamstack/</loc>
+    <loc>https://ajsmith.co/tags/jamstack/</loc>
     <lastmod>2024-10-23T08:45:17-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nodejs/</loc>
+    <loc>https://ajsmith.co/tags/nodejs/</loc>
     <lastmod>2024-10-23T08:45:17-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/static-development-streamlining/</loc>
+    <loc>https://ajsmith.co/articles/static-development-streamlining/</loc>
     <lastmod>2024-10-23T08:45:17-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/comparing-facial-symmetry/</loc>
+    <loc>https://ajsmith.co/articles/comparing-facial-symmetry/</loc>
     <lastmod>2024-08-23T15:19:13-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/quaddress-intro/</loc>
+    <loc>https://ajsmith.co/articles/quaddress-intro/</loc>
     <lastmod>2024-08-23T15:19:13-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/hugo/</loc>
+    <loc>https://ajsmith.co/tags/hugo/</loc>
     <lastmod>2024-08-23T15:19:13-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/articles/hugo-github-pages-workflow/</loc>
+    <loc>https://ajsmith.co/articles/hugo-github-pages-workflow/</loc>
     <lastmod>2024-08-23T15:19:13-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/thankyou/</loc>
+    <loc>https://ajsmith.co/thankyou/</loc>
     <lastmod>2023-09-04T15:55:51-04:00</lastmod>
   </url>
 </urlset>
