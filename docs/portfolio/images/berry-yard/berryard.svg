@@ -4,35 +4,37 @@
 
   <style>
     svg#berryard-logo {
-        background-color: white;
-        stroke-width: 1;
-        stroke-linecap: round;
-        fill: white;
-        --drupspacefill: white;
-        --drupfill: black; 
+        --white: white;
+        --black: black; 
         --purple: #4b0082;
+        background-color: var(--white);
+        fill: var(--white);
+        stroke-width: 1px;
+        stroke-linecap: round;
     }
-    #text { stroke: black; }
+    #text { stroke: var(--black) ; }
+    .white { fill: var(--white) }
+    .black { fill: var(--black) }
+    .purple { fill: var(--purple) }
   </style>
 
   <symbol id="drupelet" viewBox="0 0 2 2"> 
     <circle cx="1" cy="1" 
-            r="1" 
-            fill="var(--drupspacefill)" />
+            r="1" class="white" />
     <circle cx="1" cy="1" 
-            r=".8" fill="var(--drupfill)" />
+            r=".8" class="black" />
   </symbol>
   
   <symbol id="topdrupelet" viewBox="0 0 2 2"> 
     <circle cx="1" cy="1" 
-            r="1" fill="var(--drupspacefill)" />
+            r="1" class="white" />
     <circle cx="1" cy="1" 
-            r=".8" fill="var(--purple)" />
+            r=".8" class="purple" />
     
     <circle cx="1" cy="1" 
-            r=".6" fill="var(--drupspacefill)" />
+            r=".6" class="white" />
     <circle cx=".8" cy="1.1" 
-            r=".6" fill="var(--purple)" />
+            r=".6" class="purple" />
   </symbol>
 
   <symbol id="b" viewBox="0 0 6 8"> 
@@ -92,7 +94,7 @@
     <line x1="1" y1="3" x2="1" y2="4" />
     <path d="M 1,4 
              A 3,3 0 0 0 7,4"  
-          fill="var(--purple)"/>
+          class="purple" />
     <line x1="7" y1="3" x2="7" y2="4" />
     <line x1="4" y1="7" x2="4" y2="9" />
     <line x1="3" y1="9" x2="5" y2="9" />

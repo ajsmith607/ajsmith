@@ -190,6 +190,8 @@ cite {
        and the browser dropped into “shrink-to-fit” mode for the table. 
        Explicitly reasserting display:block and width:100% on both <figure> 
        and its child <table>, forces it back into normal block flow.
+
+       (style selector was figure.table, changing just to figure...
 */
 figure.table {
   display: block;
@@ -249,7 +251,7 @@ table, table * {
   font-size: inherit;
   /* avoid collapsed text width */ }
 
-table tbody {
+table tbody, table thead, table tfoot {
   display: table-row-group; }
 
 table tr {

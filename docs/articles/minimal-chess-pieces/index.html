@@ -175,13 +175,14 @@
             --black: black;
             --white: white;
             background-color: var(--white);
-            stroke-width: .25;
+            stroke-width: .25px;
             stroke-linecap: round;
         }
         rect { stroke: none; }
         circle { stroke: var(--black); } 
         .black-army { fill: var(--black); }
         .white-army { fill: var(--white); }
+        .gray { fill: var(--gray); }
     &lt;/style&gt;
     &lt;defs&gt;
         &lt;symbol id=&#34;pawn&#34; viewBox=&#34;0 0 10 10&#34;&gt; 
@@ -236,8 +237,8 @@
             &lt;use href=&#34;#rook&#34; x=&#34;20&#34; y=&#34;0&#34; width=&#34;10&#34; height=&#34;10&#34; /&gt;
         &lt;/symbol&gt;
         &lt;pattern id=&#34;checkerboard&#34; width=&#34;20&#34; height=&#34;20&#34; patternUnits=&#34;userSpaceOnUse&#34;&gt;
-            &lt;rect x=&#34;10&#34; y=&#34;0&#34; width=&#34;10&#34; height=&#34;10&#34; fill=&#34;var(--gray)&#34; /&gt;
-            &lt;rect x=&#34;0&#34; y=&#34;10&#34; width=&#34;10&#34; height=&#34;10&#34; fill=&#34;var(--gray)&#34; /&gt;
+            &lt;rect x=&#34;10&#34; y=&#34;0&#34; width=&#34;10&#34; height=&#34;10&#34; class=&#34;gray&#34; /&gt;
+            &lt;rect x=&#34;0&#34; y=&#34;10&#34; width=&#34;10&#34; height=&#34;10&#34; class=&#34;gray&#34; /&gt;
         &lt;/pattern&gt;
     &lt;/defs&gt;
     &lt;g id=&#34;board&#34;&gt;
