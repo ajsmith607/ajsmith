@@ -169,3 +169,15 @@ Backstage reported on December 19:
 > The derivatives have finished being created, and the hard drive is now ready for delivery.
 
 Leslie and Adam are planning to retrieve the digitized files and archived newspapers in January 2026.
+
+## January 13, 2026 Update
+
+On January 8, 2026, Leslie and Adam returned to Backstage Library Works (BSLW) to retrieve eight archival boxes containing the original newspapers as well as a hard drive of digital files. That day, Leslie took the boxes to the Pick Center and Adam took the hard drive to Brooktondale and uploaded all but the original TIFFs to a Dropbox space shared with Leslie.
+
+On January 13, 2026, Adam completed a thorough re-inventory of the physical newspapers, confirming that all were returned and stored as requested, unfolded, cleaned and mended, with interleaving sheets for added protection. At this time, the hard drive given to us by BSLW was also left with the archival boxes in the Pick Center. 
+
+On January 15, 2026, Adam completed all automated and manual checks of the digital files, verifying that all files were present and on spec. Adam communicated this to BSLW.
+
+[Download](2026-final-inventory.pdf) the Final Inventory Report (PDF).
+
+
