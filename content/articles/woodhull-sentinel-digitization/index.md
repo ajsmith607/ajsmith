@@ -174,10 +174,37 @@ Leslie and Adam are planning to retrieve the digitized files and archived newspa
 
 On January 8, 2026, Leslie and Adam returned to Backstage Library Works (BSLW) to retrieve eight archival boxes containing the original newspapers as well as a hard drive of digital files. That day, Leslie took the boxes to the Pick Center and Adam took the hard drive to Brooktondale and uploaded all but the original TIFFs to a Dropbox space shared with Leslie.
 
-On January 13, 2026, Adam completed a thorough re-inventory of the physical newspapers, confirming that all were returned and stored as requested, unfolded, cleaned and mended, with interleaving sheets for added protection. At this time, the hard drive given to us by BSLW was also left with the archival boxes in the Pick Center. 
+On January 13, 2026, Adam completed a thorough re-inventory of the physical newspapers, confirming that all were returned and stored in archival boxes as requested: unfolded, cleaned and mended, with interleaving sheets for added protection. At this time, the hard drive given to us by BSLW was also left with the archival boxes in the Pick Center. 
 
 On January 15, 2026, Adam completed all automated and manual checks of the digital files, verifying that all files were present and on spec. Adam communicated this to BSLW.
 
+The next step is to prepare the files for distribution and contact our primary distribution target, NYS Historic Newspapers. Adam will use this opportunity to test and verify that the delivery approach is correct before reaching out to other distribution targets more aggressively. 
+
 [Download](2026-final-inventory.pdf) the Final Inventory Report (PDF).
+
+## January 28, 2026 Update
+
+The complete digital scans of the Woodhull Sentinel digital collection have been collected and made available through a shared Dropbox link to a single archive file consisting of all 397 issues, 3,144 total pages, as OCR backed, full color, 400 DPI, PDF derivatives totaling 15Gb on disk.
+
+Adam has reached out to NYS Historic Newspapers--our primary distribution target--and the initial hand-off has been completed:
+
+<figure>
+
+> I've attached an updated quote. I created a shipment titled "Woodhull Spring 2026" in our Digitization Project Tracker.  I've assigned it the milestone: "4 - Processing". All shipments that join our workflow as PDFs enter at this milestone. 
+>
+> Around once a month I transfer files to our software partner Verdian Software. You've missed the January upload but your files will be included in the February upload. They do final checks on the files and ingest them into the web site software. Once I've signed off on the ingest, they'll move them to the live site.  When I know they are up and look good, I'll send you a wrap-up email with links to your files.  Afterwards, our business office will email you an invoice with a few options to pay.
+
+<figcaption>
+<cite>
+
+— 28 Jan 2026, Chuck Henry, Integrated Technologies Coordinator, Northern New York Library Network, email correspondence.
+
+</cite>
+</figure>
+
+This timeline and updated quote have been forwarded to Leslie Smith, Town of Woodhull NY Historian.
+
+This confirms the delivery approach is sound, and Adam will now use this approach to more aggressively pursue other distribution targets from the initial plan.
+
 
 
