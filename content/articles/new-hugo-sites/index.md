@@ -13,4 +13,8 @@ In the past year, I have been creating a number of Hugo sites and modules and ha
 
 The following is my current such documentation, in bash code, for creating a new Hugo site hosted on Github pages. Obviously, you will need to change the USERNAME variable accordingly. 
 
-{{< gist "ajs17" "782d48b4e352c724eff74e53400d3696" >}}
+<pre><code>
+{{< get-file-contents "newhugosite.sh" >}}
+</code></pre>
+
+

@@ -5,7 +5,18 @@ weight: 2
 mainid: "portfolio"
 ---
 
-A summary of selected projects, present and past.
+A summary of selected projects, planned, present and past.
+
+## 'Emily Mills' Rosemary
+
+[github.com/ajsmith607/emilymillsrosemary](https://github.com/ajsmith607/emilymillsrosemary)
+[ajsmith607.github.io/emilymillsrosemary/](https://ajsmith607.github.io/emilymillsrosemary/)
+
+(Planning.)
+
+{{< figure src="/portfolio/images/emily-mills-rosemary/screenshot.png" width="500" class="image" >}}
+
+A proposed project to selectively breed a distinctly new rosemary variety that is USDA zone 5 cold-hardy. 
 
 ## Brookton Berryard
 
@@ -18,7 +29,7 @@ Logo concept for naturally fermented herbaceous wine, produced from local, organ
 
 ## Deedmapify 
 
-(In progress.)
+(Planning.)
 
 {{< figure src="/portfolio/images/deedmapify/deedmapify-mockup2.png" width="500" class="image" >}}
 

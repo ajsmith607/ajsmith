@@ -1,0 +1,34 @@
+<!doctype html><html lang=en-us><head><meta charset=UTF-8><title>a j smith - my process for creating new Hugo sites</title><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=”robots” content="index, follow"><meta name=msvalidate.01 content><link href=/css/style.min.2a8255258d3b6cbf9511a886032f37bc80e0d894978313869349c833e49dc9f5.css rel=stylesheet integrity="sha256-KoJVJY07bL+VEaiGAy83vIDg2JSXgxOGk0nIM+SdyfU="><link href=/css/print.css rel=stylesheet media=print><script src=https://code.jquery.com/jquery-3.6.0.slim.min.js crossorigin=anonymous integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="></script><script src=/js/stupidtable.min.js></script><script src=/js/smartquotes.js></script></head><body><header><svg class="svg-triangle"><polygon points="0,0 800,0 0,40"/></svg><nav id=menumain><ul><li><a href=/ class=homelink>a j smith</a></li><li><a href=/articles/>Articles</a></li><li><a href=/portfolio/>Portfolio</a></li><li><a href=/contact/>Contact</a></li></ul></nav></header><main class=single><article><h1>my process for creating new Hugo sites</h1><div class=meta>Last Update:
+<time datetime="Sunday 01 May 2022" class=text-muted>Sunday 01 May 2022</time></div><div class=content><p>In the past year, I have been creating a number of Hugo sites and modules and have been enjoying the convenience of hosting on Github pages. I routinely run the <em>script</em> command to capture my terminal sessions to later document my processes for future re-use, and if possible, to do so in executable code.</p><p>The following is my current such documentation, in bash code, for creating a new Hugo site hosted on Github pages. Obviously, you will need to change the USERNAME variable accordingly.</p><pre><code>
+#!/bin/bash
+
+if [ -z &#34;${1}&#34; ]; then
+    echo &#34;create a new repository at Github with REPONAME&#34;
+    echo &#34;then call this script with REPONAME as the first argument&#34;
+    exit 1
+fi
+
+# for convenience, a function similar to Perl&#39;s
+die() { echo &#34;$*&#34; 1&gt;&amp;2 ; exit 1; }
+
+USERNAME=&#34;myusername&#34; 
+REPONAME=&#34;${1}&#34; 
+ORIGIN=git@github.com:&#34;${USERNAME}&#34;/&#34;${REPONAME}&#34;.git
+
+hugo new site &#34;${REPONAME}&#34; # creates REPONAME directory
+cd &#34;${REPONAME}&#34; || die &#34;no directory named ${REPONAME}&#34;
+printf &#34;.envrc\n&#34; &gt; .gitignore 
+
+hugo mod init github.com/&#34;${USERNAME}&#34;/&#34;${REPONAME}&#34;
+git init
+git add *
+git commit -m &#34;first commit&#34;
+git branch -M main
+git remote add origin &#34;${ORIGIN}&#34;
+git remote set-url origin &#34;${ORIGIN}&#34;
+git push -u origin main
+
+echo &#34;*** REMEMBER to create .envrc as needed to set publish directory at Github&#34;
+
+
+</code></pre></div><nav class=tags><ul><li><a href=/tags/bash>bash</a></li><li><a href=/tags/hugo>hugo</a></li><li><a href=/tags/github-pages>github-pages</a></li><li><a href=/tags/jamstack>jamstack</a></li></ul></nav></article></main><aside><div><div><h3>LATEST POSTS</h3></div><div><ul><li><a href=/articles/quaddress-cont/>quaddresses: imprecision in practice</a></li><li><a href=/articles/woodhull-sentinel-digitization/>woodhull sentinel digitization and preservation project</a></li><li><a href=/articles/minimal-chess-pieces/>Pip: Minimal Two-Dimensional Chess Piece Set</a></li><li><a href=/articles/wine-cube/>Wine Cube: simple wine bottle storage model</a></li><li><a href=/articles/cell/>cell: minimal geometric font</a></li></ul></div></div></aside><footer><p clas=copyright>&copy; <span id=cwyear></span> <a href=https://ajsmith.co/>a j smith</a></p><script>document.getElementById("cwyear").innerHTML=(new Date).getFullYear()</script></footer></body></html>

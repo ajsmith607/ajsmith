@@ -9,7 +9,7 @@ fi
 # for convenience, a function similar to Perl's
 die() { echo "$*" 1>&2 ; exit 1; }
 
-USERNAME="ajs17" 
+USERNAME="myusername" 
 REPONAME="${1}" 
 ORIGIN=git@github.com:"${USERNAME}"/"${REPONAME}".git
 

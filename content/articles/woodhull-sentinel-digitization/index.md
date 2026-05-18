@@ -180,7 +180,7 @@ On January 15, 2026, Adam completed all automated and manual checks of the digit
 
 The next step is to prepare the files for distribution and contact our primary distribution target, NYS Historic Newspapers. Adam will use this opportunity to test and verify that the delivery approach is correct before reaching out to other distribution targets more aggressively. 
 
-[Download](2026-final-inventory.pdf) the Final Inventory Report (PDF).
+[Download](2026-final-inventory.pdf) Final Inventory Report (PDF).
 
 ## January 28, 2026 Update
 
@@ -205,6 +205,31 @@ Adam has reached out to NYS Historic Newspapers--our primary distribution target
 This timeline and updated quote have been forwarded to Leslie Smith, Town of Woodhull NY Historian.
 
 This confirms the delivery approach is sound, and Adam will now use this approach to more aggressively pursue other distribution targets from the initial plan.
+
+
+## May 8, 2026, Final Report Summary and Link to Full Report
+
+The project completed on time and under budget.
+
+The project has met all major goals:
+
+1. Preserve the physical collection in archival storage boxes.
+2. Digitize the entire collection.
+3. Distribute the digitized files to newspaper services, local historical societies, etc.
+4. Preserve the digital collection.
+
+Adam will continue to facilitate storing a backup drive with the Steuben County Historic Society that includes files from Middletown Historic Society of Steuben County, 
+
+Additionally, Adam has built a hosted newspaper archive website to serve as a free, community-owned access point to these newspapers, ensuring these materials remain accessible regardless of changes in external platforms or business models. Adam has given Leslie a plan with estimates for domain name and website hosting costs. The website source code itself is freely available under an open source (MIT) license at https://github.com/ajsmith607/woodhull-sentinel-website.
+
+Adam is prepared to do the following at the direction of the Town of Woodhull:
+
+- Domain and website hosting: purchase, set-up, and documentation for the custom Woodhull Sentinel website..
+- Send out a press release.
+
+Leslie will present the final report to the Town of Woodhull.
+
+[Download](Woodhull-Sentinel-Digitization-Project-Final-Report.pdf) Final Report (PDF).
 
 
 
