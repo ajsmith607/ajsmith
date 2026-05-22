@@ -5,7 +5,30 @@ tags:
 - digitization
 ---
 
-Following the discovery of several hundred newspapers from the 1930's from the Town of Woodhull New York, a plan was developed to digitize and preserve the content. In April 2025, the Town of Woodhull reviewed the project proposal and agreed to fund it. The project will begin Summer 2025 with the vendor [Backstage Library Works](http://www.bslw.com), with a goal of completion by the end of 2025.
+Newspapers were donated to The Town of Woodhull New York by Steve and Amy Farrand after they were discovered in the attic of a West Main Street home they owned at the time. The collection is comprised mostly of **The Woodhull Sentinel** in the 1930's, including its very first issue on June 5, 1930, which promised a "bang-up good paper" to serve the "folks of Woodhull, Jasper and the vicinity". Leslie Smith, Woodhull Community Historian collected these newspapers, adding a few dozen more issues previously donated from multiple sources, and along with Adam Smith, oversaw their digitization and preservation by [Backstage Library Works](http://www.bslw.com) in Bethlehem PA in 2025.
+
+397 total issues, typically 8 pages per issue, 3,144 total pages:
+
+<figure>
+
+| Issue Count | Publication | Dates |
+| :---- | :---- | :---- |
+| 320 | The Woodhull Sentinel | 6/5/1930 \- 8/4/1938 |
+| 73 | The Addison Advertiser & The Woodhull Sentinel | 8/3/1939 \- 4/26/1967 |
+| 2 | The Canisteo Times | 6/9/1933, 12/17/1959 |
+| 1 | The Evening Leader | 6/2/1938 |
+| 1 | Southern Steuben Republican | 12/19/1895 |
+
+</figure>
+
+Known publishing information for **The Woodhull Sentinel**:
+
+* Published: weekly  
+* Publisher: Southern Tier News Inc., Addison NY  
+* First Issue: June 5, 1930  
+* Last Issue: exact date unknown  
+* By August 3, 1939, **The Woodhull Sentinel** had been subsumed under **The Addison Advertiser** to become **The Addison Advertiser and The Woodhull Sentinel**. That issue is volume 80 ("LXXX"), indicating that **The Addison Advertiser** began publication in 1860\.
+
 
 <!--more-->
 
@@ -43,15 +66,21 @@ Caitlin, our project representative at Backstage Library Works, has completed an
 
 Between the time when we signed the contract with Backstage and the time when we delivered the materials, Leslie had discovered 22 additional newspaper editions that we included in the final delivery to Backstage. As a result, there was a slight increase from the estimate quoted in our contract with them: 
 
+<figure>
+
 | Original inventory used for contract estimate with Backstage | Final inventory delivered to Backstage |
 |-------------------|---------------|
 | 372 editions | 394 editions |
 | 2978 pages total | 3,152 pages total |
 | $5020.00 Estimated | $5196.32 Currently Estimated |
 
+</figure>
+
 **A $176.32 increase from the estimate in the contract.**
 
 The increased number of pages will also slightly increase the cost to import them into the New York State Historic Newspapers service, so our overall project budget is now:
+
+<figure>
 
 | Amount   | Description |
 |----------|-------------|
@@ -59,6 +88,8 @@ The increased number of pages will also slightly increase the cost to import the
 | $50.00   | NYS Historic Newspapers base import fee |
 | $63.04   | NYS Historic Newspapers $0.02 per page fee <br /> (originally $59.52, increased $3.52) |
 | $5309.36 | Total Current Project Estimate <br /> (was originally $5129.52, increased by $179.84, or approx 3.3%) |
+
+</figure>
 
 Caitlin has entered the project into their production schedule with a late Summer/early Fall start time. She will let us know when they start. She expects the project to take 4-6 weeks to complete, putting us on track to complete the digitization by the end of 2025, but once the project begins, she will confirm the timeline and projected completion date.
 
