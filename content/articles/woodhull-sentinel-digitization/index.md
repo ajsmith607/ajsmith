@@ -9,6 +9,8 @@ Newspapers were donated to The Town of Woodhull New York by Steve and Amy Farran
 
 397 total issues, typically 8 pages per issue, 3,144 total pages:
 
+<!--more-->
+
 <figure>
 
 | Issue Count | Publication | Dates |
@@ -21,6 +23,20 @@ Newspapers were donated to The Town of Woodhull New York by Steve and Amy Farran
 
 </figure>
 
+The newspapers are currently available online:
+
+- [NYS Historic Newspapers](https://www.nyshistoricnewspapers.org/?a=p&p=collections&collection=TOW&e=-------en-20--1--txt-txIN----------) (FREE, recommended)
+- Archive.org (FREE):
+  - [The Woodhull Sentinel](https://archive.org/details/woodhull-sentinel-digital-newspaper-archive)
+  - [The Addison Advertiser and The Woodhull Sentinel](https://archive.org/details/addison-advertiser-woodhull-sentinel-archive)
+- Newspapers.com (payment required):
+  - [The Woodhull Sentinel](https://www.newspapers.com/paper/the-woodhull-sentinel/44881/)
+  - [The Addison Advertiser and The Woodhull Sentinel](https://www.newspapers.com/paper/the-addison-advertiser-and-the-woodhull/44882/)
+
+[Download](Woodhull-Sentinel-Digitization-Project.pdf) Project Proposal (PDF).
+
+[Download](Woodhull-Sentinel-Digitization-Project-Final-Report.pdf) Final Report (PDF).
+
 Known publishing information for **The Woodhull Sentinel**:
 
 * Published: weekly  
@@ -28,11 +44,6 @@ Known publishing information for **The Woodhull Sentinel**:
 * First Issue: June 5, 1930  
 * Last Issue: exact date unknown  
 * By August 3, 1939, **The Woodhull Sentinel** had been subsumed under **The Addison Advertiser** to become **The Addison Advertiser and The Woodhull Sentinel**. That issue is volume 80 ("LXXX"), indicating that **The Addison Advertiser** began publication in 1860\.
-
-
-<!--more-->
-
-[Download](Woodhull-Sentinel-Digitization-Project.pdf) Project Proposal (PDF).
 
 {{< figure src="1933-06-29-Woodhull-Sentinel-p1.jpg" width="800" class="image" >}}
 
